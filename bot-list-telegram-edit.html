@@ -160,68 +160,108 @@
                                                 <h4 class="display-inline-block"><a class="text-muted chat-close me-2" href="javascript:javascript:history.go(-1)">
                                                     <i class="fas fa-arrow-left d-xl-none d-lg-none d-md-none"></i>
                                                 </a> Bot</h4>
+                                                <nav>
+                                                    <ol class="breadcrumb mb-0 mt-2 ms-2">
+                                                        <li class="breadcrumb-item">
+                                                            <a href="bot-list-telegram.html" class="text-primary"><i class="ti ti-arrow-left text-primary"></i> Telegram Bot Listing</a>
+                                                        </li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Bot Information</li>
+                                                    </ol>
+                                                </nav>
                                             </div>
                                             <div class="card-body pb-0">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="d-inline-flex setting-header mb-3">
+                                                            <div class="d-flex align-items-center flex-wrap row-gap-2 p-0">
+                                                                <a href="bot-list-telegram-edit.html" class="active pe-3"><i class="ti ti-settings-cog me-2"></i>Bot Info</a>
+                                                                <a href="bot-list-telegram-edit-scheduler.html"><i class="ti ti-alarm me-2"></i>Bot Scheduler</a>
+                                                                <a href="bot-list-telegram-edit-assistant.html"><i class="ti ti-apps me-2"></i>Bot Assistant</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="row gx-3">
-                                                    <div class="col-xl-3 col-md-4">
-                                                        <div class="card mb-3 mb-md-0">
-                                                            <div class="card-body setting-sidebar">
-                                                                <div class="d-flex">
-                                                                    <a href="bot.html" class="rounded flex-fill"><i
-                                                                            class="ti ti-text-plus me-2"></i>WhatsApp Bot List</a>
-                                                                </div>
-                                                                <div class="d-flex">
-                                                                    <a href="bot-list-telegram.html" class="active rounded flex-fill"><i
-                                                                            class="ti ti-plug-connected me-2"></i>Telegram Bot List</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <!--  -->
-                                                    <div class="col-xl-9 col-md-12">
+                                                    <div class="col-xl-12 col-md-12">
                                                         <div class="card setting-content mb-0">
-                                                            <div class="card-header">
-                                                                <div class="d-flex justify-content-between align-items-center">
-                                                                    <h4>Telegram Bot List</h4>
+                                                            
+                                                            <div class="card-body p-4">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 col-sm-12">
+                                                                        <h4 class="mb-4">Basic Information</h4>
+                                                                        <div class="row align-items-center mb-3">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="chat-settings">
+                                                                                    <h6 class="fw-medium">Channel Name</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-8">
+                                                                                <div class="chat-options">
+                                                                                    Channel Name 1
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row align-items-center mb-3">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="chat-settings">
+                                                                                    <h6 class="fw-medium">Telegram Phone Number</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-8">
+                                                                                <div class="chat-options">
+                                                                                    012 345 6789
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row align-items-center mb-3">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="chat-settings">
+                                                                                    <h6 class="fw-medium">Telegram Token ID</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-8">
+                                                                                <div class="chat-options">
+                                                                                    038930902
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row align-items-center mb-3">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="chat-settings">
+                                                                                    <h6 class="fw-medium">Assistant Name</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-8">
+                                                                                <div class="chat-options">
+                                                                                    Assistant Name 1
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row align-items-center chat-settings-lists mb-3 py-2">
+                                                                            <div class="col-lg-4">
+                                                                                <h6 class="fw-medium">Assistant Prompt</h6>
+                                                                            </div>
+                                                                            <div class="col-lg-8">
+                                                                                <textarea rows="5" class="form-control w-100">Lorem...</textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="card-body p-0">
-                                                                <div class="table-responsive">
-                                                                    <table class="datatable table table-stripped">
-                                                                        <thead class="thead-light">
-                                                                            <tr>
-                                                                                <th class="fw-semibold">Channel Name</th>
-                                                                                <th class="fw-semibold">Phone No.</th>
-                                                                                <th class="fw-semibold">Token ID</th>
-                                                                                <th class="fw-semibold">Assistant Name</th>
-                                                                                <th class="fw-semibold">Action</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <th>Channel Name 1</th>
-                                                                                <th class="text-gray fw-normal">012 345 6789</th>
-                                                                                <th class="text-gray fw-normal">4587245</th>
-                                                                                <th class="text-gray fw-normal">Assistant Name ABC</th>
-                                                                                <th>
-                                                                                    <a href="bot-list-telegram-edit.html" class="btn btn-sm btn-primary">Edit</a>
-                                                                                </th>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Channel Name 2</th>
-                                                                                <th class="text-gray fw-normal">012 345 6789</th>
-                                                                                <th class="text-gray fw-normal">4587245</th>
-                                                                                <th class="text-gray fw-normal">Assistant Name ABC</th>
-                                                                                <th>
-                                                                                    <a href="bot-list-telegram-edit.html" class="btn btn-sm btn-primary">Edit</a>
-                                                                                </th>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
+                                                                <div class="row g-3">       
+                                                                    <div class="col-12">                  
+                                                                        <div class="d-flex align-items-center justify-content-end m-0">
+                                                                            <a href="#" class="btn btn-outline-primary me-2">Cancel</a>
+                                                                            <a href="#" class="btn btn-primary">Save</a>
+                                                                        </div>
+                                                                    </div>     
+                                                                   
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="mx-3 px-3 mt-5">
