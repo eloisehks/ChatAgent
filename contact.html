@@ -38,6 +38,9 @@
 
     <!-- Feathericon CSS -->
 	<link rel="stylesheet" href="assets/css/feather.css">
+
+    <!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 	
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
@@ -75,7 +78,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Customise CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/customise.css"> -->
+    <link rel="stylesheet" href="assets/css/customise.css">
 
 </head>
 
@@ -154,9 +157,8 @@
 
                                 <div class="chat-search-header">                            
                                     <div class="header-title d-flex align-items-center justify-content-between">
-                                        <h4 class="mb-3">sssss Contacts</h4>
+                                        <h4 class="mb-3"> Contacts</h4>
                                         <div class="d-flex align-items-center mb-3">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-contact" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-16 me-2"><i class="ti ti-plus"></i></a>
                                         </div>
                                     </div>
                             
@@ -175,106 +177,288 @@
                                 <div class="sidebar-body chat-body">
                                 
                                     <!-- Left Chat Title -->
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <!-- <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h5>All Contacts</h5>
-                                    </div>
+                                    </div> -->
                                     <!-- /Left Chat Title -->
 
-                                    <div class="chat-users-wrap">
-                                        <div class="mb-4">
-                                            <h6 class="mb-2">A</h6>   
-                                            <div class="chat-list">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg online me-2">
-                                                        <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Aaryian Jose</h6>
-                                                            <p>last seen 5 days ago</p>
+                                    <div class="tab-content" id="innerTabContent">
+                                        <div class="tab-pane fade show active" id="all-chats" role="tabpanel" aria-labelledby="all-chats-tab">
+                                            <!-- whatsapp & telegram tab -->
+                                            <div class="content-wrapper">
+                                                <div class="card-body">
+                                                    <ul class="nav nav-tabs tab-style-2 nav-justified mb-3 d-sm-flex d-block" id="myTab1"
+                                                        role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active  cursor-default" id="order-tab" data-bs-toggle="tab"
+                                                                data-bs-target="#order-tab-pane" type="button" role="tab"
+                                                                aria-controls="home-tab-pane" aria-selected="true"><i class="fa-brands fa-whatsapp me-1 align-middle"></i> WhatsApp</button>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContent">
+                                                        <div class="tab-pane fade show active text-muted" id="order-tab-pane" role="tabpanel"
+                                                            aria-labelledby="home-tab-1" tabindex="0">
+                                                            <div class="mb-2">
+                                                                <div class="mb-3">
+                                                                    <select class="select" style="z-index: 89 !important">
+                                                                        <option selected>Select WhatsApp Number</option>
+                                                                        <option>012 345 6789 - Name 1</option>
+                                                                        <option>012 345 6789 - Name 2</option>
+                                                                        <option>012 345 6789 - Name 3</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="header-title d-flex align-items-center justify-content-between">
+
+                                                                    <div class="align-items-center mb-3">
+                                                                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                                                            <div class="btn-group" role="group">
+                                                                                <button type="button" class="btn btn-primary dropdown-toggle"
+                                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <i class="ti ti-square"></i>
+                                                                                </button>
+                                                                                <ul class="dropdown-menu" aria-labelledby="checkboxDropdown">
+                                                                                    <li><a class="dropdown-item" href="#">All</a></li>
+                                                                                    <li><a class="dropdown-item" href="#">None</a></li>   
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="btn-group me-2 ms-2">
+                                                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as" class="btn btn-primary-ghost tooltip-wrap" data-tooltip="Label as" style="z-index: 99 !important"><i class="ti ti-tag"></i></a>
+                                                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-label" class="btn btn-primary-ghost tooltip-wrap" data-tooltip="New Label" style="z-index: 99 !important"><i class="ti ti-plus"></i></a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- <div class="d-flex align-items-center mb-3">
+                                                                        <div class="dropdown d-flex">
+                                                                            <button class="btn btn-primary-ghost btn-sm dropdown-toggle" type="button" id="checkboxDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                              <i class="ti ti-square"></i>
+                                                                            </button>
+                                                                            <ul class="dropdown-menu" aria-labelledby="checkboxDropdown">
+                                                                              <li><a class="dropdown-item" href="#">All</a></li>
+                                                                              <li><a class="dropdown-item" href="#">None</a></li>   
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="dropdown d-flex ms-0">
+                                                                            <a href="javascript:void(0);" data-bs-toggle="dropdown" class="btn btn-icon btn-primary btn-sm p-3 ms-2 d-flex justify-content-center align-items-center">
+                                                                                <i class="ti ti-dots-vertical"></i>
+                                                                            </a>
+                                                                           
+                                                                            <ul class="dropdown-menu p-3">
+                                                                                
+                                                                                <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#invite"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#invite"><i class="ti ti-plus me-2"></i>New Label</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-group" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-16 me-1 ms-3"><i class="ti ti-tag"></i> </a>Label as
+                                                                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-group" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-16 me-1 ms-3"><i class="ti ti-plus"></i> </a>New Label
+                                                                    </div> -->
+
+                                                                    
+                                                                    <!-- <div class="dropdown d-flex ms-0 mb-3">
+                                                                        <a href="javascript:void(0);" data-bs-toggle="dropdown" class="fs-16 text-default">
+                                                                            <i class="ti ti-dots-vertical"></i>
+                                                                        </a>
+                                                                        <ul class="dropdown-menu p-3">
+                                                                            
+                                                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#invite"><i class="ti ti-send me-2"></i>Label as</a></li>
+                                                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#invite"><i class="ti ti-send me-2"></i>Create New</a></li>
+                                                                        </ul>
+                                                                    </div> -->
+                                                                    <!-- <p class="ms-0 mb-3 fs-15"><i class="ti ti-tag"></i> Label as</p> -->
+                                                                    <!-- <div class="d-flex align-items-center mb-3">
+                                                                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-group" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-16 me-2"><i class="ti ti-tag"></i> </a>Label as
+                                                                    </div> 
+                                                                    <div class="d-flex align-items-center mb-3">
+                                                                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-group" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-16 me-2"><i class="ti ti-plus"></i> New Label</a>
+                                                                    </div> -->
+                                                                </div>
+                                                                
+                                                                
+                                                                <div class="chat-users-wrap">
+                                                                    <div class="mb-4">
+                                                                        <h6 class="mb-2 text-start">A</h6>   
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg online me-2">
+                                                                                        <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Aaryian Jose</h6>
+                                                                                            <p>last seen 5 days ago</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> 
+                                                                    </div>
+                                                                    <div class="mb-4">
+                                                                        <h6 class="mb-2 text-start">C</h6>   
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg offline me-2">
+                                                                                        <img src="assets/img/profiles/avatar-03.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Clyde Smith</h6>
+                                                                                            <p>is busy now!</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg online me-2">
+                                                                                        <img src="assets/img/profiles/avatar-04.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Carla Jenkins</h6>
+                                                                                            <p>is online now</p>
+                                                                                        </div> 
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>  
+                                                                    </div>
+                                                                    <div class="mb-4">
+                                                                        <h6 class="mb-2 text-start">D</h6>     
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg away me-2">
+                                                                                        <img src="assets/img/profiles/avatar-14.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Danielle Baker</h6>
+                                                                                            <p>last seen a week ago</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>    
+                                                                    </div>
+                                                                    <div class="mb-4">
+                                                                        <h6 class="mb-2 text-start">E</h6>   
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg online me-2">
+                                                                                        <img src="assets/img/profiles/avatar-06.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Edward Lietz</h6>
+                                                                                            <p>Do you know which App or ...</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>    
+                                                                    </div>
+                                                                    <div class="mb-4">
+                                                                        <h6 class="mb-2 text-start">F</h6>   
+                                                                        <div class="chat-list d-flex align-items-center justify-content-between">
+                                                                            <div class="form-check d-flex ms-2">
+                                                                                <input class="form-check-input" type="checkbox" name="contact">
+                                                                            </div>
+                                                                            <div class="flex-fill">
+                                                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                                                    <div class="avatar avatar-lg online me-2">
+                                                                                        <img src="assets/img/profiles/avatar-07.jpg" class="rounded-circle" alt="image">
+                                                                                    </div>
+                                                                                    <div class="chat-user-info">
+                                                                                        <div class="chat-user-msg">
+                                                                                            <h6>Federico Wells</h6>
+                                                                                            <p>last seen 10 min ago</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <div class="chat-dropdown">
+                                                                                    <a class="#" href="#" data-bs-toggle="dropdown">
+                                                                                        <i class="ti ti-dots-vertical"></i>
+                                                                                    </a>
+                                                                                     <ul class="dropdown-menu dropdown-menu-end p-3">
+                                                                                        <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>  
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade text-muted" id="confirm-tab-pane"
+                                                            role="tabpanel" aria-labelledby="profile-tab-2" tabindex="0">
                                                         </div>
                                                     </div>
-                                                </a>      
-                                            </div> 
-                                        </div>
-                                        <div class="mb-4">
-                                            <h6 class="mb-2">C</h6>   
-                                            <div class="chat-list"> 
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg offline me-2">
-                                                        <img src="assets/img/profiles/avatar-03.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Clyde Smith</h6>
-                                                            <p>is busy now!</p>
-                                                        </div>
-                                                    </div>
-                                                </a>     
-                                            </div>  
-                                            <div class="chat-list">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg online me-2">
-                                                        <img src="assets/img/profiles/avatar-04.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Carla Jenkins</h6>
-                                                            <p>is online now</p>
-                                                        </div> 
-                                                    </div>
-                                                </a>       
-                                            </div>  
-                                        </div>
-                                        <div class="mb-4">
-                                            <h6 class="mb-2">D</h6>     
-                                            <div class="chat-list">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg away me-2">
-                                                        <img src="assets/img/profiles/avatar-14.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Danielle Baker</h6>
-                                                            <p>last seen a week ago</p>
-                                                        </div>
-                                                    </div>
-                                                </a>     
-                                            </div>    
-                                        </div>
-                                        <div class="mb-4">
-                                            <h6 class="mb-2">E</h6>   
-                                            <div class="chat-list">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg online me-2">
-                                                        <img src="assets/img/profiles/avatar-06.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Edward Lietz</h6>
-                                                            <p>Do you know which App or ...</p>
-                                                        </div>
-                                                    </div>
-                                                </a>    
-                                            </div>    
-                                        </div>
-                                        <div class="mb-4">
-                                            <h6 class="mb-2">F</h6>   
-                                            <div class="chat-list">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                    <div class="avatar avatar-lg online me-2">
-                                                        <img src="assets/img/profiles/avatar-07.jpg" class="rounded-circle" alt="image">
-                                                    </div>
-                                                    <div class="chat-user-info">
-                                                        <div class="chat-user-msg">
-                                                            <h6>Federico Wells</h6>
-                                                            <p>last seen 10 min ago</p>
-                                                        </div>
-                                                    </div>
-                                                </a>    
-                                            </div>  
+                                                </div>
+                                            </div>
+                                            <!-- /whatsapp & telegram tab -->
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -295,7 +479,7 @@
                         <span class="avatar avatar-md me-2">
                             <img src="assets/img/profiles/avatar-16.jpg" alt="img" class="rounded-circle">
                         </span>                            
-                        <h6>Contact! Salom<img src="assets/img/icons/emoji-01.svg" alt="Image" class="ms-2"></h6>
+                        <h6>Hello!<img src="assets/img/icons/emoji-01.svg" alt="Image" class="ms-2"></h6>
                     </div>
                     <p>Choose a person or group to start chat with them.</p>
                     <a href="javascript:void(0);" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#new-chat"><i class="ti ti-location me-2"></i>Invite Contacts</a>
@@ -347,6 +531,9 @@
         
     <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Datatable JS -->
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
 	
 	<!-- Slimscroll JS -->
     <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -366,6 +553,1017 @@
 
 	<!-- Custom JS -->
     <script src="assets/js/script.js"></script> 
-	
+
+    <!-- New Label -->
+    <div class="modal fade" id="add-label">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">New Label</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ti ti-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.html">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="form-label">Label Name</label>
+                                <div class="input-icon mb-3 position-relative">                                           
+                                    <input type="text" value="" class="form-control" placeholder="Label Name">
+                                    <span class="icon-addon">
+                                        <i class="ti ti-tag"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label class="form-label">About</label>
+                                <div class="input-icon mb-3 position-relative">
+                                    <input type="text" value="" class="form-control" placeholder="About the label">
+                                    <span class="icon-addon">
+                                        <i class="ti ti-info-octagon"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row g-3">       
+                            <div class="col-6">                  
+                                <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                            </div>     
+                            <div class="col-6">      
+                                <button type="button"  class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#">Save</button>
+                            </div> 
+                        </div> -->
+                    </form>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="my-3 d-flex">Add Users</h6>
+                        <a href="javascript:void(0);" data-bs-target="#newuser-1" data-bs-toggle="modal" data-bs-dismiss="modal" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-15 me-2"><i class="ti ti-plus"></i></a>
+                    </div>
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        </div>
+                        <div class="col-6">   
+                            <button type="button"  class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#">Save</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!-- /New Label -->
+
+    <!-- Label as -->
+    <div class="modal fade" id="modal-label-as">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Label as
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ti ti-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="chat.html">
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label1">
+                            <label class="form-check-label text-primary" for="label1">Label name 1 - about the label.about the labelabout the labelabout the labelabout the label......</label>
+                            <p class="my-2"><strong class="me-2">3</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label2">
+                            <label class="form-check-label  text-primary" for="label2">Label name 2 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">2</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label3">
+                            <label class="form-check-label  text-primary" for="label3">Label name 3 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">13</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label1">
+                            <label class="form-check-label text-primary" for="label1">Label name 1 - about the label.about the labelabout the labelabout the labelabout the label......</label>
+                            <p class="my-2"><strong class="me-2">3</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                            
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label2">
+                            <label class="form-check-label  text-primary" for="label2">Label name 2 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">2</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label3">
+                            <label class="form-check-label  text-primary" for="label3">Label name 3 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">13</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label1">
+                            <label class="form-check-label text-primary" for="label1">Label name 1 - about the label.about the labelabout the labelabout the labelabout the label......</label>
+                            <p class="my-2"><strong class="me-2">3</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                            
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label2">
+                            <label class="form-check-label  text-primary" for="label2">Label name 2 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">2</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                        <div class="form-check border-bottom pb-2 mb-3">
+                            <input class="form-check-input" type="checkbox" name="mute" id="label3">
+                            <label class="form-check-label  text-primary" for="label3">Label name 3 - about the label.......</label>
+                            <p class="my-2"><strong class="me-2">13</strong> contacts listed under this label <a href="#" class="btn btn-sm btn-light rounded-pill justify-content-center align-items-center ms-4 float-end" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-eye me-2"></i>View Label</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        </div>
+                        <div class="col-6">   
+                            <button type="submit" class="btn btn-primary w-100">Save</button>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </div>
+    <!-- /Label as -->
+
+    <!-- Modal Label Name list -->
+    <div class="modal fade" id="labelname2" aria-hidden="true"
+        aria-labelledby="labelname2" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="labelname2">View user listed under this label</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="my-3">Label Name 1</h5>
+                    <!-- <h6 class="my-3">Contacts listed under this label </h6> -->
+                    <div class="search-wrap border mb-4">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search For Contacts">
+                                <span class="input-group-text"><i class="ti ti-search"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="chat-users-wrap">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <button class="btn btn-primary w-100" data-bs-target="#modal-label-as" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Label as</button>
+                        </div>
+                        <div class="col-6">   
+                                <button class="btn btn-outline-primary w-100" data-bs-target="#editlabel3" data-bs-toggle="modal" data-bs-dismiss="modal">Edit Label</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Label name list -->
+
+    <!-- Modal Edit Label -->
+    <div class="modal fade" id="editlabel3" aria-hidden="true"
+        aria-labelledby="editlabel3" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="editlabel3">Edit Label</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.html">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label class="form-label">Label Name</label>
+                                <div class="input-icon mb-3 position-relative">                                           
+                                    <input type="text" class="form-control" value="Label Name 1">
+                                    <span class="icon-addon">
+                                        <i class="ti ti-tag"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label class="form-label">About</label>
+                                <div class="input-icon mb-3 position-relative">
+                                    <input type="text" class="form-control" value="About the label">
+                                    <span class="icon-addon">
+                                        <i class="ti ti-info-octagon"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="my-3 d-flex">Contacts listed under this label </h6>
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#newuser" class="add-icon btn btn-primary p-0 d-flex align-items-center justify-content-center fs-15 me-2"><i class="ti ti-plus"></i></a>
+                    </div>
+
+                    <div class="search-wrap border mb-4">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search For Contacts">
+                                <span class="input-group-text"><i class="ti ti-search"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="chat-users-wrap">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="mb-4">
+                                    <div class="chat-list d-flex align-items-center justify-content-between">
+                                        <div class="flex-fill">
+                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                                <div class="avatar avatar-lg online me-2">
+                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                                </div>
+                                                <div class="chat-user-info">
+                                                    <div class="chat-user-msg">
+                                                        <h6>Aaryian Jose</h6>
+                                                        <p>last seen 5 days ago</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="form-check d-flex ms-2">
+                                            <a href="" class="btn btn-icon btn-soft-danger rounded-pill d-flex justify-content-center align-items-center"><i class="ti ti-x fs-15"></i></a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <button class="btn btn-primary me-2 w-100" data-bs-target="#modal-label-as" data-bs-toggle="modal" data-bs-dismiss="close">Cancel</button>
+                        </div>
+                        <div class="col-6">   
+                            <button class="btn btn-outline-primary w-100" data-bs-target="#editlabel3" data-bs-toggle="modal" data-bs-dismiss="modal">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal Edit Label -->
+
+    <!-- Modal New Name list -->
+    <div class="modal fade" id="newuser" aria-hidden="true"
+        aria-labelledby="newuser" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="newuser">Contact List</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-wrap border mb-4">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search For Contacts">
+                                <span class="input-group-text"><i class="ti ti-search"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="chat-users-wrap">
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">A</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Aaryian Jose</h6>
+                                                <p>last seen 5 days ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">C</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg offline me-2">
+                                            <img src="assets/img/profiles/avatar-03.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Clyde Smith</h6>
+                                                <p>is busy now!</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-04.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Carla Jenkins</h6>
+                                                <p>is online now</p>
+                                            </div> 
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">D</h6>     
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg away me-2">
+                                            <img src="assets/img/profiles/avatar-14.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Danielle Baker</h6>
+                                                <p>last seen a week ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">E</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-06.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Edward Lietz</h6>
+                                                <p>Do you know which App or ...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">F</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-07.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Federico Wells</h6>
+                                                <p>last seen 10 min ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <button class="btn btn-outline-primary w-100" data-bs-target="#editlabel3" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Edit Label</button>
+                        </div>
+                        <div class="col-6">   
+                            <button class="btn btn-primary w-100" data-bs-target="#" data-bs-toggle="modal" data-bs-dismiss="close">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal New name list -->
+
+    <!-- Modal New Name list -->
+    <div class="modal fade" id="newuser-1" aria-hidden="true"
+        aria-labelledby="newuser" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="newuser">Contact List</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-wrap border mb-4">
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search For Contacts">
+                                <span class="input-group-text"><i class="ti ti-search"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="chat-users-wrap">
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">A</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Aaryian Jose</h6>
+                                                <p>last seen 5 days ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">C</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg offline me-2">
+                                            <img src="assets/img/profiles/avatar-03.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Clyde Smith</h6>
+                                                <p>is busy now!</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-04.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Carla Jenkins</h6>
+                                                <p>is online now</p>
+                                            </div> 
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">D</h6>     
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg away me-2">
+                                            <img src="assets/img/profiles/avatar-14.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Danielle Baker</h6>
+                                                <p>last seen a week ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">E</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-06.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Edward Lietz</h6>
+                                                <p>Do you know which App or ...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2 text-start">F</h6>   
+                            <div class="chat-list d-flex align-items-center justify-content-between">
+                                <div class="form-check d-flex ms-2">
+                                    <input class="form-check-input" type="checkbox" name="contact">
+                                </div>
+                                <div class="flex-fill">
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
+                                        <div class="avatar avatar-lg online me-2">
+                                            <img src="assets/img/profiles/avatar-07.jpg" class="rounded-circle" alt="image">
+                                        </div>
+                                        <div class="chat-user-info">
+                                            <div class="chat-user-msg">
+                                                <h6>Federico Wells</h6>
+                                                <p>last seen 10 min ago</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="chat-dropdown">
+                                        <a class="#" href="#" data-bs-toggle="dropdown">
+                                            <i class="ti ti-dots-vertical"></i>
+                                        </a>
+                                         <ul class="dropdown-menu dropdown-menu-end p-3">
+                                            <li><a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal-label-as"><i class="ti ti-tag me-2"></i>Label as</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer display-block">
+                    <div class="row g-3">       
+                        <div class="col-6">   
+                            <button class="btn btn-outline-primary w-100" data-bs-target="#add-label" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Add Label</button>
+                        </div>
+                        <div class="col-6">   
+                            <button class="btn btn-primary w-100" data-bs-target="#add-label" data-bs-toggle="modal" data-bs-dismiss="modal">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal New user 1 -->
+    
 </body>
 </html>
