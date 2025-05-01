@@ -155,77 +155,131 @@
                             <div class="chats">                
                                 <div class="row full-width">
                                     <div class="col-xl-12 col-md-12 col-sm-12">
-                                        <div class="card mb-4">
-                                            <div class="card-header border-0 px-0 mx-3">
-                                                <h4 class="display-inline-block"><a class="text-muted chat-close me-2" href="javascript:javascript:history.go(-1)">
-                                                    <i class="fas fa-arrow-left d-xl-none d-lg-none d-md-none"></i>
-                                                </a> Bot</h4>
-                                            </div>
-                                            <div class="card-body pb-4">
-                                                <div class="row gx-3">
-                                                    <div class="col-xl-3 col-md-4">
-                                                        <div class="card mb-3 mb-md-0">
-                                                            <div class="card-body setting-sidebar">
-                                                                <div class="d-flex">
-                                                                    <a href="bot.html" class="active rounded flex-fill"><i
-                                                                            class="fa-brands fa-whatsapp me-2"></i>WhatsApp Bot List</a>
-                                                                </div>
-                                                                <div class="d-flex">
-                                                                    <a href="bot-list-telegram.html" class="rounded flex-fill"><i
-                                                                            class="fa-brands fa-telegram me-2"></i>Telegram Bot List</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--  -->
-                                                    <div class="col-xl-9 col-md-8">
-                                                        <div class="card setting-content mb-0">
-                                                            <div class="card-header">
-                                                                <div class="d-flex justify-content-between align-items-center">
-                                                                    <h4>WhatsApp Bot List</h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="table-responsive">
-                                                                    <table class="datatable table table-stripped">
-                                                                        <thead class="thead-light">
-                                                                            <tr>
-                                                                                <th class="fw-semibold">Business Name</th>
-                                                                                <th class="fw-semibold">Phone No.</th>
-                                                                                <th class="fw-semibold">Token ID</th>
-                                                                                <th class="fw-semibold">Assistant Name</th>
-                                                                                <th class="fw-semibold">Action</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <th>Business Name 1</th>
-                                                                                <th class="text-gray fw-normal">012 345 6789</th>
-                                                                                <th class="text-gray fw-normal">4587245</th>
-                                                                                <th class="text-gray fw-normal">Assistant Name ABC</th>
-                                                                                <th>
-                                                                                    <a href="bot-list-whatsapp-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
-                                                                                </th>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>Business Name 2</th>
-                                                                                <th class="text-gray fw-normal">012 345 6789</th>
-                                                                                <th class="text-gray fw-normal">4587245</th>
-                                                                                <th class="text-gray fw-normal">Assistant Name ABC</th>
-                                                                                <th>
-                                                                                    <a href="bot-list-whatsapp-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
-                                                                                </th>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Autentication Settings -->
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<!-- Page Header -->
+				<div class="d-md-flex d-block align-items-center justify-content-between mb-4">
+					<div class="my-auto">
+						<h4 class="page-title mb-1">Profile Settings</h4>
+						<nav>
+							<ol class="breadcrumb mb-0">
+								<li class="breadcrumb-item">
+									<a href="index.html"><i class="ti ti-home text-primary"></i></a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="javascript:void(0);">General Settings</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- Page Header -->
+				
+				<!-- General Settings -->
+				<div class="card setting-card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card d-inline-flex setting-header mb-3">
+									<div class="card-body d-flex align-items-center flex-wrap row-gap-2 p-0">
+										<a href="profile-settings.html" class="active ps-3"><i class="ti ti-settings-cog me-2"></i>General Settings</a>
+										<a href="app-settings.html"><i class="ti ti-apps me-2"></i>App Settings</a>
+										<a href="localization-settings.html"><i class="ti ti-device-ipad-horizontal-cog me-2"></i>System Settings</a>
+										<a href="appearance-settings.html"><i class="ti ti-layers-subtract me-2"></i>Theme Settings</a>
+										<a href="storage.html" class="pe-3"><i class="ti ti-settings-2 me-2"></i>Other Settings</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row gx-3">
+							<div class="col-xl-3 col-md-4">
+								<div class="card mb-3 mb-md-0">
+									<div class="card-body setting-sidebar">
+										<div class="d-flex">
+											<a href="profile-settings.html" class="active rounded flex-fill"><i class="ti ti-user-circle me-2"></i>Profile Settings</a>
+										</div>
+										<div class="d-flex">
+											<a href="change-password.html" class="rounded flex-fill"><i class="ti ti-lock-cog me-2"></i>Change Password</a>
+										</div>
+										<div class="d-flex">
+											<a href="notification-settings.html" class="rounded flex-fill"><i class="ti ti-bell-ringing me-2"></i>Notification </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Profile Settings -->
+							<div class="col-xl-9 col-md-8">
+								<div class="card setting-content mb-0">
+									<div class="card-header px-0 mx-3">
+										<h4>Profile Settings</h4>
+									</div>
+									<div class="card-body pb-0">
+										<div class="d-flex align-items-center mb-3">
+											<div class="avatar avatar-xxl me-3">
+												<img src="assets/img/users/user-08.jpg" class="rounded img-fluid" alt="user">
+											</div>
+											<div>
+												<p class="text-dark fw-medium mb-0">Upload Project Logo</p>
+												<p class="fs-13 mb-2">Image support png, jpeg and gif under 10MB</p>
+												<div class="d-flex align-items-center"> 
+													<div class="profile-uploader d-flex align-items-center">
+														<div class="drag-upload-btn btn mb-0">
+															Upload
+															<input type="file" class="form-control image-sign" multiple="">
+														</div>
+														<a href="javascript:void(0);" class="btn btn-md btn-outline-primary">Remove</a>
+													</div>
+												
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">First Name</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Last Name</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Email Address</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Phone Number</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer mx-3 px-0">
+										<div class="d-flex align-items-center justify-content-end m-0">
+											<a href="#" class="btn btn-outline-primary me-2">Cancel</a>
+											<a href="#" class="btn btn-primary">Save</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Profile Settings -->
+						</div>
+
+					</div>
+
+				</div>
+				<!-- /General Settings -->
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
                                     </div>
                                 </div>
                             </div>
@@ -369,7 +423,6 @@
     <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!-- Datatable JS -->
-    <script src="assets/plugins/datatables/ jquery.dataTables.min.js"></script>
 	<script src="assets/plugins/datatables/datatables.min.js"></script>
 
     <!-- Chart JS -->
@@ -390,18 +443,18 @@
     <!-- FancyBox JS -->
     <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
 
+    <!-- Select JS -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
     <!-- Datetimepicker JS -->
 	<script src="assets/js/moment.min.js"></script>
 	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-    <!-- Select JS -->
-    <script src="assets/plugins/select2/js/select2.min.js"></script>
 
     <!-- Theme-Settings -->
 	<script src="assets/js/theme-settings.js"></script>
 
 	<!-- Custom JS -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script> 
 	
 </body>
 </html>

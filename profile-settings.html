@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<meta name="description" content="Template Content">
+	<meta name="keywords" content="Template Keywords">
+	<meta name="author" content="Dreamguys - DreamsChat">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@dreamguystech">
+	<meta name="twitter:title" content="Template Content">
+	<meta name="twitter:description" content="Template Content">
+	<meta name="twitter:image" content="assets/img/meta-image.jpg">
+	<meta name="twitter:image:alt" content="">
+
+	<meta property="og:url" content="Template Landing Page URL">
+	<meta property="og:title" content="Template Titlte">
+	<meta property="og:description" content="Template Content">
+	<meta property="og:image" content="/assets/img/meta-image.jpg">
+	<meta property="og:image:secure_url" content="assets/img/meta-image.jpg">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="600">
+
+	<title>Dreamchat - Dashboard</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Themescript -->
+	<script src="assets/js/theme-script.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/css/feather.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+	<!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+	<!-- Boxicons CSS -->
+	<link rel="stylesheet" href="assets/plugins/boxicons/css/boxicons.min.css">
+
+	<!-- Tabler Icon CSS -->
+	<link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.css">
+
+	<!-- Mobile CSS-->
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
+
+	<!-- Datepicker CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	<!-- Daterangepikcer CSS -->
+	<link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+
+	<!-- Select CSS -->
+	<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+
+
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+	<div class="main-wrapper">
+
+		<!-- Header -->
+		<div class="header">
+
+			<!-- Logo -->
+			<div class="header-left active">
+				<a href="index.html" class="logo logo-normal">
+					<img src="assets/img/full-logo.svg" alt="Logo">
+				</a>
+				<a href="index.html" class="logo-small">
+					<img src="assets/img/logo-small.svg" alt="Logo">
+				</a>
+			</div>
+			<!-- /Logo -->
+
+			<a id="mobile_btn" class="mobile_btn" href="javascript:void(0);sidebar">
+				<span class="bar-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+
+			<div class="header-user">
+				<div class="nav user-menu">
+
+					<!-- Search -->
+					<div class="nav-item nav-search-inputs me-auto">
+						<div class="top-nav-search">
+							<a href="javascript:void(0);" class="responsive-search">
+								<i class="fa fa-search"></i>
+							</a>
+							<div class="d-flex align-items-center">
+							<a id="toggle_btn" href="javascript:void(0);" class="me-2">
+								<i class="ti ti-menu-2"></i>
+							</a>
+								<form action="javascript:void(0);" class="dropdown">
+									<div class="searchinputs" id="dropdownMenuClickable">
+										<input type="text" placeholder="Search">
+										<div class="search-addon">
+											<span><i class="ti ti-search"></i></span>
+										</div>
+										<div class="search-addon-command">
+											<span><i class="ti ti-command"></i></span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- /Search -->
+
+					<div class="d-flex align-items-center">
+						<div class="provider-head-links ">
+							<div class="dark-mode">
+								<a href="javascript:void(0);" id="dark-mode-toggle" class="dark-mode-toggle header-icon">
+									<i class="fa-regular fa-moon"></i>
+								</a>
+								<a href="javascript:void(0);" id="light-mode-toggle" class="dark-mode-toggle header-icon">
+									<i class="ti ti-sun-filled"></i>
+								</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<a href="#" class="header-icon flag-icon" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="assets/img/flag/flag-01.png" alt="Language" class="img-fluid rounded-pill">
+							</a>
+							<div class="dropdown-menu dropdown-menu-right p-3">
+								<a href="javascript:void(0);" class="dropdown-item active d-flex align-items-center">
+									<img class="me-2 rounded-pill" src="assets/img/flag/flag-01.png" alt="Img" height="22" width="22"> English
+								</a>
+								<a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
+									<img class="me-2 rounded-pill" src="assets/img/flag/flag-02.png" alt="Img" height="22" width="22"> French
+								</a>
+								<a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
+									<img class="me-2 rounded-pill" src="assets/img/flag/flag-03.png" alt="Img" height="22" width="22"> Spanish
+								</a>
+								<a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
+									<img class="me-2 rounded-pill" src="assets/img/flag/flag-04.png" alt="Img" height="22" width="22"> German
+								</a>
+							</div>
+						</div>
+						<div class="provider-head-links">
+							<a href="chat.html" class="d-flex align-items-center justify-content-center header-icon active-dot">
+								<i class="ti ti-message fs-16"></i>
+							</a>
+						</div>
+						<div class="provider-head-links">
+							<a href="javascript:void(0);" class="d-flex align-items-center justify-content-center dropdown-toggle header-icon active-dot" data-bs-toggle="dropdown">
+								<i class="feather-bell fs-16"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end notification-dropdown p-4">
+								<div
+									class="d-flex dropdown-body align-items-center justify-content-between border-bottom p-0 pb-3 mb-3">
+									<h6 class="notification-title">Notifications <span class="fs-18 text-gray">
+											(2)</span></h6>
+									<div class="d-flex align-items-center">
+										<a href="#" class="text-primary fs-15 me-3 lh-1">Mark all as read</a>
+										<div class="dropdown">
+											<a href="javascript:void(0);" class="bg-white dropdown-toggle"
+												data-bs-toggle="dropdown" data-bs-auto-close="outside"><i
+													class="ti ti-calendar-due me-1"></i>Today
+											</a>
+											<ul class="dropdown-menu mt-2 p-3">
+												<li>
+													<a href="javascript:void(0);" class="dropdown-item rounded-1">
+														This Week
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);" class="dropdown-item rounded-1">
+														Last Week
+													</a>
+												</li>
+												<li>
+													<a href="javascript:void(0);" class="dropdown-item rounded-1">
+														Last Week
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="noti-content">
+									<div class="d-flex flex-column">
+										<div class="border-bottom mb-3 pb-3">
+											<a href="javascript:void(0);">
+												<div class="d-flex">
+													<span class="avatar avatar-lg me-2 flex-shrink-0">
+														<img src="assets/img/profiles/avatar-52.jpg" alt="Profile"
+															class="rounded-circle">
+													</span>
+													<div class="flex-grow-1">
+														<div class="d-flex align-items-center">
+															<p class="mb-1 w-100"><span
+																	class="text-dark fw-semibold">Stephan Peralt</span>
+																rescheduled the service to 14/01/2024. </p>
+															<span class="d-flex justify-content-end "> <i
+																	class="ti ti-point-filled text-primary"></i></span>
+														</div>
+														<span>Just Now</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="border-bottom mb-3 pb-3">
+											<a href="javascript:void(0);" class="pb-0">
+												<div class="d-flex">
+													<span class="avatar avatar-lg me-2 flex-shrink-0">
+														<img src="assets/img/profiles/avatar-36.jpg" alt="Profile"
+															class="rounded-circle">
+													</span>
+													<div class="flex-grow-1">
+														<div class="d-flex align-items-center">
+															<p class="mb-1 w-100"><span
+																	class="text-dark fw-semibold">Harvey Smith</span>
+																has requested your service.</p>
+															<span class="d-flex justify-content-end "> <i
+																	class="ti ti-point-filled text-primary"></i></span>
+														</div>
+														<span>5 mins ago</span>
+														<div
+															class="d-flex justify-content-start align-items-center mt-2">
+															<span class="btn btn-light btn-sm me-2">Deny</span>
+															<span class="btn btn-dark btn-sm">Accept</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="border-bottom mb-3 pb-3">
+											<a href="javascript:void(0);">
+												<div class="d-flex">
+													<span class="avatar avatar-lg me-2 flex-shrink-0">
+														<img src="assets/img/profiles/avatar-02.jpg" alt="Profile"
+															class="rounded-circle">
+													</span>
+													<div class="flex-grow-1">
+														<p class="mb-1"><span class="text-dark fw-semibold"> Anthony
+																Lewis</span> has left feedback for your recent service
+														</p>
+														<span>10 mins ago</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="border-0 mb-3 pb-0">
+											<a href="javascript:void(0);">
+												<div class="d-flex">
+													<span class="avatar avatar-lg me-2 flex-shrink-0">
+														<img src="assets/img/profiles/avatar-22.jpg" alt="Profile"
+															class="rounded-circle">
+													</span>
+													<div class="flex-grow-1">
+														<p class="mb-1"><span class="text-dark fw-semibold">Brian
+																Villaloboshas </span> cancelled the service scheduled
+															for 14/01/2024.
+														</p>
+														<span>15 mins ago</span>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex p-0 notification-footer-btn">
+									<a href="#" class="btn btn-light rounded  me-2">Cancel</a>
+									<a href="#" class="btn btn-dark rounded ">View All</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="dropdown">
+							<a href="javascript:void(0);" data-bs-toggle="dropdown">
+								<div class="booking-user d-flex align-items-center">
+									<span class="user-img me-2">
+										<img src="assets/img/users/user-08.jpg" alt="user">
+									</span>
+									<div>
+										<h6 class="fs-14 fw-medium">Thomas Rethman</h6>
+										<span class="text-primary fs-12">Administrator</span>
+									</div>
+								</div>
+							</a>
+							<ul class="dropdown-menu p-2">
+								<li>
+									<a class="dropdown-item d-flex align-items-center" href="login.html">
+										<i class="ti ti-logout me-1"></i>Logout
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="dropdown mobile-user-menu">
+				<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+					aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+				<div class="dropdown-menu dropdown-menu-end">
+					<a class="dropdown-item" href="profile.html">My Profile</a>
+					<a class="dropdown-item" href="profile-settings.html">Settings</a>
+					<a class="dropdown-item" href="login.html">Logout</a>
+				</div>
+			</div>
+			<!-- /Mobile Menu -->
+
+		</div>
+		<!-- /Header -->
+
+		<!-- Sidebar -->
+		<div class="sidebar" id="sidebar">
+			<div class="sidebar-inner slimscroll">
+				<div id="sidebar-menu" class="sidebar-menu d-flex flex-column justify-content-between">
+					<ul class="menu-top">
+						<li>
+							<a href="index.html"><i
+									class="ti ti-layout-dashboard"></i><span>Dashboard</span></a>
+						</li>
+						<li class="submenu">
+							<a href="users.html"><i class="ti ti-user"></i><span>Users</span><span
+									class="menu-arrow"></span></a>
+							<ul>
+								<li>
+									<a href="users.html"><i
+											class="ti ti-point-filled me-2"></i>Users List</a>
+								</li>
+								<li>
+									<a href="block-user.html"><i
+											class="ti ti-point-filled me-2"></i>Blocked Users</a>
+								</li>
+								<li>
+									<a href="report-user.html"><i
+											class="ti ti-point-filled me-2"></i>Reported Users</a>
+								</li>
+								<li>
+									<a href="invite-user.html"><i
+											class="ti ti-point-filled me-2"></i>Invited Users</a>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="group.html" ><i class="ti ti-users-group"></i><span>Group
+								</span></a>
+						</li>
+						<li>
+							<a href="chat.html"><i class="ti ti-message-circle"></i><span>Chat</span></a>
+						</li>
+						<li>
+							<a href="call.html"><i class="ti ti-phone-call"></i><span>Calls</span></a>
+						</li>
+						<li>
+							<a href="abuse-message.html"><i class="ti ti-message-report"></i><span>Abuse Messages</span></a>
+						</li>
+						<li>
+							<a href="stories.html"><i class="ti ti-circle-dot"></i><span>Stories</span></a>
+						</li>
+						<li class="active">
+							<a href="profile-settings.html"><i class="ti ti-settings"></i><span>Settings</span></a>
+						</li>
+						<li class="submenu">
+							<h6 class="submenu-hdr"><span>UI Interface</span></h6>
+							<a href="javascript:void(0);">
+								<i class="ti ti-hierarchy-2"></i><span>Base UI</span><span
+									class="menu-arrow"></span>
+							</a>
+							<ul>
+								<li><a href="ui-alerts.html"><i class="ti ti-point-filled me-2"></i>Alerts</a></li>
+								<li><a href="ui-accordion.html"><i class="ti ti-point-filled me-2"></i>Accordion</a></li>
+								<li><a href="ui-avatar.html"><i class="ti ti-point-filled me-2"></i>Avatar</a></li>
+								<li><a href="ui-badges.html"><i class="ti ti-point-filled me-2"></i>Badges</a></li>
+								<li><a href="ui-borders.html"><i class="ti ti-point-filled me-2"></i>Border</a></li>
+								<li><a href="ui-buttons.html"><i class="ti ti-point-filled me-2"></i>Buttons</a></li>
+								<li><a href="ui-buttons-group.html"><i class="ti ti-point-filled me-2"></i>Button Group</a></li>
+								<li><a href="ui-breadcrumb.html"><i class="ti ti-point-filled me-2"></i>Breadcrumb</a></li>
+								<li><a href="ui-cards.html"><i class="ti ti-point-filled me-2"></i>Card</a></li>
+								<li><a href="ui-carousel.html"><i class="ti ti-point-filled me-2"></i>Carousel</a></li>
+								<li><a href="ui-colors.html"><i class="ti ti-point-filled me-2"></i>Colors</a></li>
+								<li><a href="ui-dropdowns.html"><i class="ti ti-point-filled me-2"></i>Dropdowns</a></li>
+								<li><a href="ui-grid.html"><i class="ti ti-point-filled me-2"></i>Grid</a></li>
+								<li><a href="ui-images.html"><i class="ti ti-point-filled me-2"></i>Images</a></li>
+								<li><a href="ui-lightbox.html"><i class="ti ti-point-filled me-2"></i>Lightbox</a></li>
+								<li><a href="ui-media.html"><i class="ti ti-point-filled me-2"></i>Media</a></li>
+								<li><a href="ui-modals.html"><i class="ti ti-point-filled me-2"></i>Modals</a></li>
+								<li><a href="ui-offcanvas.html"><i class="ti ti-point-filled me-2"></i>Offcanvas</a></li>
+								<li><a href="ui-pagination.html"><i class="ti ti-point-filled me-2"></i>Pagination</a></li>
+								<li><a href="ui-popovers.html"><i class="ti ti-point-filled me-2"></i>Popovers</a></li>
+								<li><a href="ui-progress.html"><i class="ti ti-point-filled me-2"></i>Progress</a></li>
+								<li><a href="ui-placeholders.html"><i class="ti ti-point-filled me-2"></i>Placeholders</a></li>
+								<li><a href="ui-spinner.html"><i class="ti ti-point-filled me-2"></i>Spinner</a></li>
+								<li><a href="ui-sweetalerts.html"><i class="ti ti-point-filled me-2"></i>Sweet Alerts</a></li>
+								<li><a href="ui-nav-tabs.html"><i class="ti ti-point-filled me-2"></i>Tabs</a></li>
+								<li><a href="ui-toasts.html"><i class="ti ti-point-filled me-2"></i>Toasts</a></li>
+								<li><a href="ui-tooltips.html"><i class="ti ti-point-filled me-2"></i>Tooltips</a></li>
+								<li><a href="ui-typography.html"><i class="ti ti-point-filled me-2"></i>Typography</a></li>
+								<li><a href="ui-video.html"><i class="ti ti-point-filled me-2"></i>Video</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);">
+								<i class="ti ti-hierarchy-3"></i><span>Advanced UI</span><span
+									class="menu-arrow"></span>
+							</a>
+							<ul>
+								<li><a href="ui-ribbon.html"><i class="ti ti-point-filled me-2"></i>Ribbon</a></li>
+								<li><a href="ui-clipboard.html"><i class="ti ti-point-filled me-2"></i>Clipboard</a></li>
+								<li><a href="ui-drag-drop.html"><i class="ti ti-point-filled me-2"></i>Drag & Drop</a></li>
+								<li><a href="ui-rangeslider.html"><i class="ti ti-point-filled me-2"></i>Range Slider</a></li>
+								<li><a href="ui-rating.html"><i class="ti ti-point-filled me-2"></i>Rating</a></li>
+								<li><a href="ui-text-editor.html"><i class="ti ti-point-filled me-2"></i>Text Editor</a></li>
+								<li><a href="ui-counter.html"><i class="ti ti-point-filled me-2"></i>Counter</a></li>
+								<li><a href="ui-scrollbar.html"><i class="ti ti-point-filled me-2"></i>Scrollbar</a></li>
+								<li><a href="ui-stickynote.html"><i class="ti ti-point-filled me-2"></i>Sticky Note</a></li>
+								<li><a href="ui-timeline.html"><i class="ti ti-point-filled me-2"></i>Timeline</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);"><i class="ti ti-chart-line"></i>
+								<span>Charts</span><span class="menu-arrow"></span>
+							</a>
+							<ul>
+								<li><a href="chart-apex.html"><i class="ti ti-point-filled me-2"></i>Apex Charts</a></li>
+								<li><a href="chart-c3.html"><i class="ti ti-point-filled me-2"></i>Chart C3</a></li>
+								<li><a href="chart-js.html"><i class="ti ti-point-filled me-2"></i>Chart Js</a></li>
+								<li><a href="chart-morris.html"><i class="ti ti-point-filled me-2"></i>Morris Charts</a></li>
+								<li><a href="chart-flot.html"><i class="ti ti-point-filled me-2"></i>Flot Charts</a></li>
+								<li><a href="chart-peity.html"><i class="ti ti-point-filled me-2"></i>Peity Charts</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);"><i class="ti ti-icons"></i>
+								<span>Icons</span><span class="menu-arrow"></span>
+							</a>
+							<ul>
+								<li><a href="icon-fontawesome.html"><i class="ti ti-point-filled me-2"></i>Fontawesome Icons</a></li>
+								<li><a href="icon-feather.html"><i class="ti ti-point-filled me-2"></i>Feather Icons</a></li>
+								<li><a href="icon-ionic.html"><i class="ti ti-point-filled me-2"></i>Ionic Icons</a></li>
+								<li><a href="icon-material.html"><i class="ti ti-point-filled me-2"></i>Material Icons</a></li>
+								<li><a href="icon-pe7.html"><i class="ti ti-point-filled me-2"></i>Pe7 Icons</a></li>
+								<li><a href="icon-simpleline.html"><i class="ti ti-point-filled me-2"></i>Simpleline Icons</a></li>
+								<li><a href="icon-themify.html"><i class="ti ti-point-filled me-2"></i>Themify Icons</a></li>
+								<li><a href="icon-weather.html"><i class="ti ti-point-filled me-2"></i>Weather Icons</a></li>
+								<li><a href="icon-typicon.html"><i class="ti ti-point-filled me-2"></i>Typicon Icons</a></li>
+								<li><a href="icon-flag.html"><i class="ti ti-point-filled me-2"></i>Flag Icons</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);">
+								<i class="ti ti-input-search"></i><span>Forms</span><span
+									class="menu-arrow"></span>
+							</a>
+							<ul>
+								<li class="submenu submenu-two">
+									<a href="javascript:void(0);">Form Elements<span
+											class="menu-arrow inside-submenu"></span></a>
+									<ul>
+										<li><a href="form-basic-inputs.html"><i class="ti ti-point-filled me-2"></i>Basic Inputs</a></li>
+										<li><a href="form-checkbox-radios.html"><i class="ti ti-point-filled me-2"></i>Checkbox & Radios</a></li>
+										<li><a href="form-input-groups.html"><i class="ti ti-point-filled me-2"></i>Input Groups</a></li>
+										<li><a href="form-grid-gutters.html"><i class="ti ti-point-filled me-2"></i>Grid & Gutters</a></li>
+										<li><a href="form-select.html"><i class="ti ti-point-filled me-2"></i>Form Select</a></li>
+										<li><a href="form-mask.html"><i class="ti ti-point-filled me-2"></i>Input Masks</a></li>
+										<li><a href="form-fileupload.html"><i class="ti ti-point-filled me-2"></i>File Uploads</a></li>
+									</ul>
+								</li>
+								<li class="submenu submenu-two">
+									<a href="javascript:void(0);">Layouts<span
+											class="menu-arrow inside-submenu"></span></a>
+									<ul>
+										<li><a href="form-horizontal.html"><i class="ti ti-point-filled me-2"></i>Horizontal Form</a></li>
+										<li><a href="form-vertical.html"><i class="ti ti-point-filled me-2"></i>Vertical Form</a></li>
+										<li><a href="form-floating-labels.html"><i class="ti ti-point-filled me-2"></i>Floating Labels</a></li>
+									</ul>
+								</li>
+								<li><a href="form-validation.html"><i class="ti ti-point-filled me-2"></i>Form Validation</a></li>
+								<li><a href="form-select2.html"><i class="ti ti-point-filled me-2"></i>Select2</a></li>
+								<li><a href="form-wizard.html"><i class="ti ti-point-filled me-2"></i>Form Wizard</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);"><i
+									class="ti ti-table-plus"></i><span>Tables</span><span
+									class="menu-arrow"></span></a>
+							<ul>
+								<li><a href="tables-basic.html"><i class="ti ti-point-filled me-2"></i>Basic Tables </a></li>
+								<li><a href="data-tables.html"><i class="ti ti-point-filled me-2"></i>Data Table </a></li>
+							</ul>
+						</li>
+
+					</ul>
+					<ul class="menu-bottom">
+						<li>
+							<a href="index.html"><i class="ti ti-file-text"></i><span>Documentation</span>
+								<span class="version">4.0.2</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="ti ti-exchange"></i><span>Changelog
+								</span></a>
+						</li>
+						<li class="submenu">
+							<a href="javascript:void(0);"><i class="ti ti-menu-2"></i><span>Multi
+									Level</span><span class="menu-arrow"></span></a>
+							<ul>
+								<li><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 1</a></li>
+								<li class="submenu submenu-two"><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 2<span
+											class="menu-arrow inside-submenu"></span></a>
+									<ul>
+										<li><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 2.1</a></li>
+										<li class="submenu submenu-two submenu-three"><a
+												href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 2.2<span
+													class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+											<ul>
+												<li><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 2.2.1</a></li>
+												<li><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 2.2.2</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="javascript:void(0);"><i class="ti ti-point-filled me-2"></i>Multilevel 3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /Sidebar -->
+
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<!-- Page Header -->
+				<div class="d-md-flex d-block align-items-center justify-content-between mb-4">
+					<div class="my-auto">
+						<h4 class="page-title mb-1">Profile Settings</h4>
+						<nav>
+							<ol class="breadcrumb mb-0">
+								<li class="breadcrumb-item">
+									<a href="index.html"><i class="ti ti-home text-primary"></i></a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="javascript:void(0);">General Settings</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- Page Header -->
+				
+				<!-- General Settings -->
+				<div class="card setting-card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card d-inline-flex setting-header mb-3">
+									<div class="card-body d-flex align-items-center flex-wrap row-gap-2 p-0">
+										<a href="profile-settings.html" class="active ps-3"><i class="ti ti-settings-cog me-2"></i>General Settings</a>
+										<a href="app-settings.html"><i class="ti ti-apps me-2"></i>App Settings</a>
+										<a href="localization-settings.html"><i class="ti ti-device-ipad-horizontal-cog me-2"></i>System Settings</a>
+										<a href="appearance-settings.html"><i class="ti ti-layers-subtract me-2"></i>Theme Settings</a>
+										<a href="storage.html" class="pe-3"><i class="ti ti-settings-2 me-2"></i>Other Settings</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row gx-3">
+							<div class="col-xl-3 col-md-4">
+								<div class="card mb-3 mb-md-0">
+									<div class="card-body setting-sidebar">
+										<div class="d-flex">
+											<a href="profile-settings.html" class="active rounded flex-fill"><i class="ti ti-user-circle me-2"></i>Profile Settings</a>
+										</div>
+										<div class="d-flex">
+											<a href="change-password.html" class="rounded flex-fill"><i class="ti ti-lock-cog me-2"></i>Change Password</a>
+										</div>
+										<div class="d-flex">
+											<a href="notification-settings.html" class="rounded flex-fill"><i class="ti ti-bell-ringing me-2"></i>Notification </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Profile Settings -->
+							<div class="col-xl-9 col-md-8">
+								<div class="card setting-content mb-0">
+									<div class="card-header px-0 mx-3">
+										<h4>Profile Settings</h4>
+									</div>
+									<div class="card-body pb-0">
+										<div class="d-flex align-items-center mb-3">
+											<div class="avatar avatar-xxl me-3">
+												<img src="assets/img/users/user-08.jpg" class="rounded img-fluid" alt="user">
+											</div>
+											<div>
+												<p class="text-dark fw-medium mb-0">Upload Project Logo</p>
+												<p class="fs-13 mb-2">Image support png, jpeg and gif under 10MB</p>
+												<div class="d-flex align-items-center"> 
+													<div class="profile-uploader d-flex align-items-center">
+														<div class="drag-upload-btn btn mb-0">
+															Upload
+															<input type="file" class="form-control image-sign" multiple="">
+														</div>
+														<a href="javascript:void(0);" class="btn btn-md btn-outline-primary">Remove</a>
+													</div>
+												
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">First Name</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Last Name</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Email Address</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Phone Number</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer mx-3 px-0">
+										<div class="d-flex align-items-center justify-content-end m-0">
+											<a href="#" class="btn btn-outline-primary me-2">Cancel</a>
+											<a href="#" class="btn btn-primary">Save</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Profile Settings -->
+						</div>
+
+					</div>
+
+				</div>
+				<!-- /General Settings -->
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+		<!-- Theme-Settings -->
+		<div class="settings-icon"> 
+			<span data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas"><i class="ti ti-settings"></i> Customize</span> 
+		</div> 
+		<div class="offcanvas offcanvas-end border-0 " tabindex="-1" id="theme-settings-offcanvas"> 
+			<div class="sidebar-headerset">
+				<div class="sidebar-headersets">
+					<h2>Theme Customizer</h2>
+					<h3>Customize your overview page layout</h3>
+				</div>
+				<div class="sidebar-headerclose">
+					<a data-bs-dismiss="offcanvas" aria-label="Close"><i class="bx bx-x"></i></a>
+				</div>
+			</div>
+			<div class="offcanvas-body p-0"> 
+				<div data-simplebar class="h-100"> 
+					<div class="settings-mains"> 
+						<div class="layout-head">
+							<h5>Sidebar Size</h5>
+						</div>
+						<div class="screen-slide-bar">
+							<div class="row"> 
+								<div class="col-6"> 
+									<div class="form-check card-radio p-0"> 
+										<input id="customizer-layout01" name="data-layout-style" type="radio" value="default" class="form-check-input" checked> 
+										<label class="form-check-label avatar-md w-100" for="customizer-layout01" > 
+											<img src="assets/img/default.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Default</h5> 
+								</div> 
+								<div class="col-6"> 
+									<div class="form-check card-radio p-0"> 
+									<input id="customizer-layout02" name="data-layout-style" type="radio" value="small" class="form-check-input"> 
+										<label class="form-check-label  avatar-md w-100" for="customizer-layout02" > 
+											<img src="assets/img/small-view.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Small Hover View</h5> 
+								</div> 
+							</div>
+						</div>
+						 
+							<div class="layout-head pt-3">
+								<h5>Sidebar Color</h5>
+							</div>
+							<div class="colorscheme-cardradio screen-slide-bar"> 
+								<div class="row"> 
+									<div class="col-6"> 
+										<div class="form-check card-radio  p-0"> 
+											<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-light" value="light"> 
+											<label class="form-check-label  avatar-md w-100 " for="layout-mode-light"> 
+												<img src="assets/img/side-light.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Default</h5> 
+								</div> 
+								<div class="col-6"> 
+									<div class="form-check card-radio p-0"> 
+										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-gray" value="gray"> 
+										<label class="form-check-label  avatar-md w-100" for="layout-mode-gray"> 
+											<img src="assets/img/side-gray.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Gray</h5> 
+								</div> 
+								<div class="col-6"> 
+									<div class="form-check card-radio blue  p-0 "> 
+										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-blue" value="blue"> 
+										<label class="form-check-label avatar-md w-100 " for="layout-mode-blue"> 
+											<img src="assets/img/side-color.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Color</h5> 
+								</div> 
+								<div class="col-6"> 
+									<div class="form-check card-radio dark  p-0 "> 
+										<input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-dark" value="dark"> 
+										<label class="form-check-label  avatar-md w-100" for="layout-mode-dark"> 
+											<img src="assets/img/side-black.png" alt="Layout Image">
+										</label> 
+									</div> 
+									<h5 class="fs-13 text-center mt-2 head-layout">Dark</h5> 
+								</div> 
+							</div> 
+						</div> 
+						<div class="layout-head pt-3">
+							<h5>Navbar Type</h5>
+						</div>
+						<div class="form-navbar">
+							<div class="d-flex align-items-center">
+								<label class="custom-radio form-check me-3">Sticky
+									<input type="radio" class="form-check-input" name="data-topbar" id="layout-mode-sticky" value="sticky" >
+									<span class="checkmark"></span>
+								</label>
+								<label class="custom-radio me-3">Static
+								  <input type="radio" name="data-topbar" id="layout-mode-static" value="static">
+								  <span class="checkmark"></span>
+								</label>
+								<label class="custom-radio">Hidden
+									<input type="radio" name="data-topbar" id="layout-mode-hidden" value="hidden">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+					</div> 
+				</div> 
+
+			</div> 
+			<div class="offcanvas-footer text-center"> 
+				<div class="row"> 
+					<div class="col-6"> 
+						<a href="javascript:;"  class="btn btn-primary w-100 bor-rad-50"><i class="bx bx-play-circle me-1"></i>Preview</a> 
+					</div> 
+					<div class="col-6"> 
+						<button type="button" class="btn btn-light w-100 bor-rad-50" id="reset-layout"><i class="bx bx-reset me-1"></i>Reset</button> 
+					</div>
+				</div> 
+			</div> 
+		</div>
+		<!-- /Theme-Settings -->		
+
+		
+	</div>
+	<!-- /Main Wrapper -->
+
+	<!-- jQuery -->
+	
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Mobile Input -->
+	<script src="assets/plugins/intltelinput/js/intlTelInput.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatable JS -->
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+	<script src="assets/plugins/apexchart/chart-data.js"></script>
+
+	<!-- Datepicker Core JS -->
+	<script src="assets/plugins/moment/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- Daterangepikcer JS -->
+	<script src="assets/js/moment.js"></script>
+	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+	<!-- Select JS -->
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+	<!-- Theme-Settings -->
+	<script src="assets/js/theme-settings.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

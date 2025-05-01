@@ -28,54 +28,73 @@
         <title>ChatAgent Platform</title>
     
         <!-- Favicon -->
-        <link rel="icon" href="assets/img/favicon.png">
-    
-        <!-- Theme Script Js -->
-        <script src="assets/js/theme-script.js"></script>
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
-        <!-- Feathericon CSS -->
-        <link rel="stylesheet" href="assets/css/feather.css">
-        
-        <!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-    
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="assets/plugins/swiper/swiper.min.css">
-    
-        <!-- FancyBox CSS -->
-        <link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
-    
-        <!-- TablerIcon CSS -->
-        <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
-    
-        <!-- Mobile CSS-->
-        <!-- <link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
-        <link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css"> -->
-    
-        <!-- themify CSS -->
-        <!-- <link rel="stylesheet" href="assets/plugins/icons/themify/themify.css"> -->
-    
-        <!-- Pe7 CSS -->
-        <!-- <link rel="stylesheet" href="assets/plugins/icons/typicons/typicons.css"> -->
-    
-        <!-- Ionic CSS -->
-        <!-- <link rel="stylesheet" href="assets/plugins/icons/ionic/ionicons.css"> -->
-    
-        <!-- Datetimepicker CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-    
-        <!-- Select CSS -->
-        <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
-    
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    
-        <!-- Customise CSS -->
-        <link rel="stylesheet" href="assets/css/customise.css">
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- Theme Script Js -->
+    <script src="assets/js/theme-script.js"></script>
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/css/feather.css">
+    <link rel="stylesheet" href="assets/plugins/icons/feather/feather.css">
+	
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+     <!-- Scrollbar CSS -->
+	<link rel="stylesheet" href="assets/plugins/scrollbar/scroll.min.css">
+
+    <!-- Boxicons CSS -->
+	<link rel="stylesheet" href="assets/plugins/boxicons/css/boxicons.min.css">
+
+	<!-- Tabler Icon CSS -->
+	<link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.css">
+
+    <!-- Swiper CSS -->
+	<link rel="stylesheet" href="assets/plugins/swiper/swiper.min.css">
+
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css">
+
+    <!-- TablerIcon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Mobile CSS-->
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
+
+    <!-- themify CSS -->
+	<!-- <link rel="stylesheet" href="assets/plugins/icons/themify/themify.css"> -->
+
+    <!-- Pe7 CSS -->
+	<!-- <link rel="stylesheet" href="assets/plugins/icons/typicons/typicons.css"> -->
+
+    <!-- Ionic CSS -->
+	<!-- <link rel="stylesheet" href="assets/plugins/icons/ionic/ionicons.css"> -->
+
+    <!-- Dragula CSS -->
+	<link rel="stylesheet" href="assets/plugins/dragula/css/dragula.min.css">
+
+    <!-- Summernote CSS -->
+	<link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
+
+	<!-- Datetimepicker CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+    <!-- Select CSS -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Customise CSS -->
+    <link rel="stylesheet" href="assets/css/customise.css">
     
     </head>
 
@@ -308,7 +327,7 @@
                                                                 aria-labelledby="home-tab-1" tabindex="0">
                                                                 <div class="mb-2">
                                                                     <div class="mb-3 text-center">
-                                                                        <select class="form-select">
+                                                                        <select class="select">
                                                                             <option selected>Select WhatsApp Number</option>
                                                                             <option>012 345 6789 - Business Name 1 long name long name</option>
                                                                             <option>012 345 6789 - Business Name 2 long name</option>
@@ -1419,16 +1438,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Add Contact</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Add Contact</button>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -1666,16 +1681,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Add Contact</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Add Contact</button>
+                    </div>     
                 </div>
             </div>
         </div>
@@ -1837,16 +1848,12 @@
                                     <textarea class="form-control mb-3"></textarea>
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button  class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#new-chat">Send Invitation</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#new-chat">Send Invitation</button>
+                    </div>     
                 </div>
             </div>
         </div>
@@ -1929,16 +1936,12 @@
                                     </div>                                       
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Start Chat</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Start Chat</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1962,16 +1965,12 @@
                                 </span>
                                 <p class="text-grya-9">Clearing or deleting entire chats will only remove messages from this device and your devices on the newer versions of DreamsChat.</p>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Delete</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -2577,16 +2576,12 @@
                                 </span>
                                 <p class="text-grya-9">Blocked contacts will no longer be able to call you or send you messages.</p>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Block</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Block</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2645,16 +2640,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="button"  class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#add-group">Next</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-group">Next</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2737,16 +2728,12 @@
                                     </div>                                       
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#new-group">Previous</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100"  >Start Group</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#new-group">Previous</a>
+                        <button type="submit" class="btn btn-primary">Start Group</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2836,7 +2823,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>       
+                    </div>   
                 </div>
             </div>
         </div>
@@ -2886,16 +2873,12 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Delete</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2919,16 +2902,12 @@
                                 </span>
                                 <p class="text-grya-9">Are you sure you want to logout? </p>
                             </div>
-                            <div class="row g-3">       
-                                <div class="col-6">                  
-                                    <a href="#" class="btn btn-outline-primary w-100" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                                </div>     
-                                <div class="col-6">      
-                                    <button type="submit" class="btn btn-primary w-100">Logout</button>
-                                </div> 
-                            </div>
                         </form>
-                    </div>       
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -2942,9 +2921,28 @@
         
     <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Mobile Input -->
+	<script src="assets/plugins/intltelinput/js/intlTelInput.js"></script>
 	
 	<!-- Slimscroll JS -->
     <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Datatable JS -->
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+    <!-- Datepicker Core JS -->
+	<script src="assets/plugins/moment/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Dragula JS -->
+	<script src="assets/plugins/dragula/js/dragula.min.js"></script>
+	<script src="assets/plugins/dragula/js/drag-drop.min.js"></script>
+	<script src="assets/plugins/dragula/js/draggable-cards.js"></script>
+
+	<!-- Daterangepikcer JS -->
+	<script src="assets/js/moment.js"></script>
+	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
 
     <!-- Swiper JS -->
 	<script src="assets/plugins/swiper/swiper.min.js"></script>
@@ -2952,8 +2950,18 @@
     <!-- FancyBox JS -->
     <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
 
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js"></script>
+
+    <!-- Plyr JS -->
+	<script src="assets/plugins/scrollbar/scrollbar.min.js"></script>
+	<script src="assets/plugins/scrollbar/custom-scroll.js"></script>
+
     <!-- Select JS -->
     <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Summernote JS -->
+	<script src="assets/plugins/summernote/summernote-lite.min.js"></script>
 
     <!-- Datetimepicker JS -->
 	<script src="assets/js/moment.min.js"></script>

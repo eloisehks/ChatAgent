@@ -38,10 +38,14 @@
 
     <!-- Feathericon CSS -->
 	<link rel="stylesheet" href="assets/css/feather.css">
+    <link rel="stylesheet" href="assets/plugins/icons/feather/feather.css">
 	
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 
     <!-- Swiper CSS -->
 	<link rel="stylesheet" href="assets/plugins/swiper/swiper.min.css">
@@ -53,8 +57,8 @@
     <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
 
     <!-- Mobile CSS-->
-	<!-- <link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
-	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css"> -->
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
 
     <!-- themify CSS -->
 	<!-- <link rel="stylesheet" href="assets/plugins/icons/themify/themify.css"> -->
@@ -64,6 +68,12 @@
 
     <!-- Ionic CSS -->
 	<!-- <link rel="stylesheet" href="assets/plugins/icons/ionic/ionicons.css"> -->
+
+    <!-- Dragula CSS -->
+	<link rel="stylesheet" href="assets/plugins/dragula/css/dragula.min.css">
+
+    <!-- Summernote CSS -->
+	<link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
 
 	<!-- Datetimepicker CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
@@ -106,12 +116,12 @@
                                 </a>
                             </li>
                             <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Message Template" data-bs-custom-class="tooltip-primary">
-                                <a href="message-template.html">
+                                <a href="message-template.html" class="active">
                                     <i class="ti ti-layout"></i>
                                 </a>
                             </li>
                             <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Profile" data-bs-custom-class="tooltip-primary">
-                                <a href="profile.html" class="active">
+                                <a href="profile.html">
                                     <i class="ti ti-user-circle"></i>
                                 </a>
                             </li>
@@ -141,86 +151,102 @@
             <!-- /Left Sidebar Menu -->
 		
             <!-- sidebar group -->
-           
+            
             <!-- /Sidebar group -->
 
             <!-- Chat -->
-            
             <div class="no-sidebar full-width show" id="middle">
                 <div class="">
-                    <div class="chat-body chat-page-group slimscroll">
+                    <div class="chat-body slimscroll">
                         <div class="mb-5 pb-5">
                             <div class="chats">                
                                 <div class="row full-width">
                                     <div class="col-xl-12 col-md-12 col-sm-12">
                                         <div class="card mb-4">
-                                            <div class="card-header px-0 mx-3">
-                                                <h4 class="display-inline-block"><a class="text-muted chat-close me-2" href="javascript:javascript:history.go(-1)">
-                                                    <i class="fas fa-arrow-left d-xl-none d-lg-none d-md-none"></i>
-                                                </a> Profile</h4>
-                                            </div>
-                                            <div class="card-body pb-0">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <div class="avatar avatar-xxl me-3 flex-shrink-0">
-                                                        <img src="assets/img/profiles/avatar-16.jpg" class="rounded-circle" alt="user">
+                                            <div class="card-header border-0 px-0 mx-3">
+                                                <div class="d-md-flex d-block align-items-center justify-content-between mb-0">
+                                                    <div class="mb-0 mb-md-0">
+                                                        <h4><a class="text-muted chat-close me-2" href="javascript:javascript:history.go(-1)">
+                                                            <i class="fas fa-arrow-left d-xl-none d-lg-none d-md-none"></i>
+                                                        </a> Message Template</h4>
                                                     </div>
-                                                    <div>
-                                                        <p class="text-dark fw-medium mb-0">Profile Photo</p>
-                                                        <p class="fs-13 mb-2">Image support png, jpeg and gif under 10MB</p>
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="profile-uploader d-flex align-items-center">
-                                                                <div class="drag-upload-btn btn mb-0">
-                                                                    <input type="file" class="form-control" multiple="">
-                                                                </div>
-                                                                <a href="javascript:void(0);" class="btn btn-md btn-outline-primary">Remove</a>
-                                                            </div>
-                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">First Name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Last Name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Email Address</label>
-                                                            <input type="text" class="form-control" disabled>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Phone Number</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Subscription Start Date</label>
-                                                            <input type="text" value="" class="form-control datetimepicker" placeholder="30 Jan 2025" disabled>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label">Subscription End Date</label>
-                                                            <input type="text" value="" class="form-control datetimepicker" placeholder="30 Jan 2026" disabled>
+                                                    <div class="d-flex my-xl-auto right-content align-items-center flex-wrap">
+                                                        <div class="">
+                                                            <a href="message-template-add.html" class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>New Message Template</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card-footer mx-3 px-3">
-                                                <div class="d-flex align-items-center justify-content-end m-0">
-                                                    <a href="#" class="btn btn-outline-primary me-2">Cancel</a>
-                                                    <a href="#" class="btn btn-primary">Save</a>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="datatable table table-stripped">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th class="text-center fw-semibold"></th>
+                                                                <th class="text-start fw-semibold">Message Title</th>
+                                                                <th class="text-start fw-semibold">Created on</th>
+                                                                <th class="text-center fw-semibold">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-start">Lorem igsum some title</td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">2</td>
+                                                                <td class="text-start">Lorem igsum some title dsagdgdsag </td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">3</td>
+                                                                <td class="text-start">Lorem igsum some title Lorem igsum some title Lorem igsum some title </td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">4</td>
+                                                                <td class="text-start">Lorem igsum some title</td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">5</td>
+                                                                <td class="text-start">Lorem igsum some title dsagdgdsag </td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">6</td>
+                                                                <td class="text-start">Lorem igsum some title</td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">7</td>
+                                                                <td class="text-start">Lorem igsum some title dsagdgdsag </td>
+                                                                <td class="text-start">30 Apr 2025</td>
+                                                                <td class="text-center">
+                                                                    <a href="message-template-edit.html" role="button" class="btn btn-sm btn-primary">Edit</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,10 +257,7 @@
                     </div>
                 </div>
             </div>
-
             <!-- /Chat -->
-        </div>
-        <!-- /Content -->
 
         <!-- Logout -->
         <div class="modal fade" id="acc-logout">
@@ -252,7 +275,7 @@
                                 <span class="user-icon mb-3 mx-auto bg-transparent-danger">
                                     <i class="ti ti-logout text-danger"></i>
                                 </span>
-                                <p class="text-grya-9">Are you sure you want to logout? </p>
+                                <p class="text-grya-9">Are you sure you want to logout?</p>
                             </div>
                             <div class="row g-3">       
                                 <div class="col-6">                  
@@ -280,9 +303,28 @@
         
     <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Mobile Input -->
+	<script src="assets/plugins/intltelinput/js/intlTelInput.js"></script>
 	
 	<!-- Slimscroll JS -->
     <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Datatable JS -->
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+    <!-- Datepicker Core JS -->
+	<script src="assets/plugins/moment/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Dragula JS -->
+	<script src="assets/plugins/dragula/js/dragula.min.js"></script>
+	<script src="assets/plugins/dragula/js/drag-drop.min.js"></script>
+	<script src="assets/plugins/dragula/js/draggable-cards.js"></script>
+
+	<!-- Daterangepikcer JS -->
+	<script src="assets/js/moment.js"></script>
+	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
 
     <!-- Swiper JS -->
 	<script src="assets/plugins/swiper/swiper.min.js"></script>
