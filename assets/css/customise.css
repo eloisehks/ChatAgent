@@ -21,6 +21,7 @@ html, body {
 .content.main_content {
   height: 100% !important;
   display: flex !important;
+  overflow-y: auto !important;
 }
 .chat {
   flex: 1 !important; /* expand to fill remaining width */
@@ -29,7 +30,6 @@ html, body {
 }
 .full-width {
   width: 100% !important;
-  width: 100vw;
 }
 .full-height {
   min-height: 100vh !important;
@@ -53,49 +53,11 @@ html, body {
   color: #0088cc;
 }
 
-
-/* .modal .modal-body .upload-frames .profile-upload .profile-content {
-  margin-bottom: 8px;
-}
-.modal .modal-body .upload-frames .profile-upload .profile-content p {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-.modal .modal-body .upload-frames .profile-upload .profile-content span {
-  font-size: 13px;
-  color: #72767D;
-}
-.modal .modal-body .upload-frames .profile-upload .drag-upload-btn {
-  font-size: 12px;
-  font-weight: 600;
-  background: #6338F6;
-  border: 1px solid #6338F6;
-  border-radius: 5px;
-  margin: 0 12px 10px 0;
-  padding: 8px 16px 8px 16px;
-  position: relative;
-  transition: all 0.5s;
-  color: #FFF;
-}
-.modal .modal-body .upload-frames .profile-upload .drag-upload-btn input {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.modal .modal-body .upload-frames .profile-upload .btn-outline-primary {
-  padding: 8px 16px 8px 16px;
-  font-size: 13px;
-} */
-
-
 /* inner left menu for bot page */
 .setting-header a {
   border-bottom: 1px solid transparent;
   padding: 8px 20px;
-  font-size: large;
+  font-size: medium;
 }
 .setting-header a:hover, .setting-header a.active {
   border-color: #6338F6;
@@ -605,42 +567,29 @@ html, body {
 /* no sidebar section */
 .no-sidebar {
   border: 0px solid rgb(186, 35, 35);
-  margin: 20px 10px 0 100px !important;
-  padding: 0 !important;
-}
-
-@media (max-width: 991.98px) {
-  .no-sidebar {
-    border: 0px solid rgb(34, 156, 122);
-    margin: 0 0 0 80px !important;
-    padding: 0 !important;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 991.98px) {
-  /* Styles for devices between 576px and 991.98px (like iPads, tablets) */
-  .no-sidebar {
-    border: 0px solid rgb(96, 98, 118);
-    margin: 0 0 0 10px !important;
-    padding: 0 !important;
-  }
+  margin: 20px 20px 20px 95px !important;
+  /* padding: 0 !important; */
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* Styles for devices between 576px and 991.98px (like iPads, tablets) */
   .no-sidebar {
-    border: 0px solid cyan;
-    margin: 20px 0px 0 75px !important;
-    padding: 0 70px 0 0 !important;
+    border: 0px solid rgb(255, 0, 191);
+    margin: 20px 20px 20px 75px !important;
+    width: 89% !important;
+    /* padding: 0 70px 0 0 !important; */
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* Small tablets (portrait mode) */
   .no-sidebar {
-    border: 0px solid rgb(0, 255, 145);
-    margin: 10px 0 0 20px !important;
-    padding: 0 15px 0 0 !important;
+    border: 0px solid rgb(0, 30, 255);
+    margin: 10px auto 20px !important;
+    width: 95% !important;
+    /* padding: 0 15px 0 0 !important; */
   }
 }
 
@@ -648,114 +597,12 @@ html, body {
   /* Styles for devices smaller than 576px (like phones) firefox on phone */
   .no-sidebar {
     border: 0px solid rgb(246, 255, 0);
-    margin: 10px 10px !important;
-    padding: 0 0px 0px 10px !important;
-    min-height: 100vh !important;
+    margin: 10px auto 20px !important;
+    width: 95% !important;
+    /* padding: 0 10px 0px 10px !important;
+    min-height: 100vh !important; */
   }
 }
-
-/* page-wrapper */
-/* .page-wrapper {
-  margin: 0 10px 0 70px !important;
-  padding: 10px 10px !important;
-  min-height: 100vh !important;
-  width: 100% !important;
-}
-
-.page-wrapper .content {
-  border: 0px solid rgb(34, 156, 122);
-  padding: 24px;
-  background: #FDFDFE;
-  padding-bottom: 0px;
-  margin: 0 !important;
-  width: 95% !important;
-}
-
-@media (max-width: 991.98px) {
-  .page-wrapper {
-    margin: 0 !important;
-    padding: 10px 0 !important;
-    min-height: 100vh !important;
-    background: #FDFDFE;
-  }
-.page-wrapper .content {
-  border: 1px solid red;
-  padding: 24px !important;
-  background: #FDFDFE;
-  padding-bottom: 0px;
-  width: 95% !important;
-}
-} */
-
-/* Styles for devices between 576px and 991.98px (like iPads, tablets) */
-/* @media (min-width: 576px) and (max-width: 991.98px) {
-  .page-wrapper {
-    margin: 0 0 0 0px !important;
-    padding: 10px 0 0 !important;
-    min-height: 100vh !important;
-    background: #FDFDFE;
-  }
-  
-  .page-wrapper .content {
-    border: 1px solid blue;
-    padding: 25px !important;
-    padding-bottom: 0px !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-} */
-
-/* Larger tablets (landscape) */
-/* @media (min-width: 768px) and (max-width: 991.98px) {
-  .page-wrapper {
-    margin: 0 70px 0 70px !important;
-    padding: 0 !important;
-    min-height: 100vh !important;
-    background: #FDFDFE;
-    width: 100% !important;
-  }
-
-  .page-wrapper .content {
-    border: 1px solid rgb(255, 153, 0);
-    padding: 25px;
-  }
-} */
-
-/* Small tablets (portrait mode) */
-/* @media (min-width: 576px) and (max-width: 767.98px) {
-  .page-wrapper {
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 100vh !important;
-    background: #FDFDFE;
-  }
-
-  .page-wrapper .content {
-    border: 0px solid rgb(255, 255, 12);
-    padding: 25px !important;
-    padding-bottom: 0px !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-} */
-
-/* Styles for devices smaller than 576px (like phones) */
-/* @media (max-width: 575.98px) {
-  .page-wrapper {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #FDFDFE;
-  }
-
-  .page-wrapper .content {
-    border: 1px solid rgb(0, 255, 119);
-    padding: 25px !important;
-    padding-bottom: 0px !important;
-    margin: 0 0 0 !important;
-    min-height: 100vh !important;
-    width: 100% !important;
-  }
-} */
 
 /* alternative tooltip */
 .tooltip-wrap {
@@ -802,7 +649,6 @@ label.custom-file-btn {
 label.custom-file-btn:hover {
   background-color: #0b5ed7;
 }
-
 
 /* Scrollbar */
 .scroll-sendto {
