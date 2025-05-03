@@ -597,7 +597,7 @@ html, body {
   /* Styles for devices smaller than 576px (like phones) firefox on phone */
   .no-sidebar {
     border: 0px solid rgb(246, 255, 0);
-    margin: 10px auto 20px !important;
+    margin: 10px auto 100px !important;
     width: 95% !important;
     /* padding: 0 10px 0px 10px !important;
     min-height: 100vh !important; */
