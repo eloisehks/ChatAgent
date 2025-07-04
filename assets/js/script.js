@@ -230,39 +230,65 @@ Version      : 2.7.6
 	}
 
 	// Summernote
-
-	if($('#summernote').length > 0) {
-		$('#summernote').summernote({
-		height: 300,                 // set editor height
-		minHeight: null,             // set minimum height of editor
-		maxHeight: null,             // set maximum height of editor
-		focus: false                 // set focus to editable area after initializing summernote
-		});
-	}
 	
-	// Summernote
+	if ($('#summernote').length > 0) {
+	const maxChars = 1000;
 
-	if($('#summernote2').length > 0) {
-		$('#summernote2').summernote({
-		height: 300,                 // set editor height
-		minHeight: null,             // set minimum height of editor
-		maxHeight: null,             // set maximum height of editor
-		focus: true                  // set focus to editable area after initializing summernote
-		});
+	$('#summernote').summernote({
+		height: 180,
+		minHeight: null,
+		maxHeight: null,
+		focus: true,
+		disableDragAndDrop: true,
+		toolbar: [
+		['fontsize', ['fontsize']],
+		['font', ['bold', 'italic', 'underline', 'strikethrough']],
+		['insert', ['link', 'hr']],
+		['color', ['color']],
+		['para', ['ul', 'ol', 'paragraph']],
+		['view', ['codeview']]
+		],
+		callbacks: {
+		onInit: function() {
+			updateCharCount();
+		},
+		onChange: function(contents, $editable) {
+			updateCharCount();
+		}
+		}
+	});
+
+	function updateCharCount() {
+		const html = $('#summernote').summernote('code');
+		const text = $('<div>').html(html).text().trim();
+		const count = text.length;
+
+		$('.char-count').text(`${count} / ${maxChars}`);
+		$('.char-count').css('color', count > maxChars ? 'red' : '#666');
+	}
 	}
 
-	if($('#summernote3').length > 0) {
-		$('#summernote3').summernote({
-		placeholder: 'Type your message',
-		height: 300,                 // set editor height
-		minHeight: null,             // set minimum height of editor
-		maxHeight: null,             // set maximum height of editor
-		focus: true                  // set focus to editable area after initializing summernote
-		});
-	}
+	// if($('#summernote2').length > 0) {
+	// 	$('#summernote2').summernote({
+	// 	height: 150,
+	// 	minHeight: null,
+	// 	maxHeight: null,
+	// 	focus: true
+	// 	});
+	// }
+
+	// if($('#summernote3').length > 0) {
+	// 	$('#summernote3').summernote({
+	// 	placeholder: 'Type your message',
+	// 	height: 150,
+	// 	minHeight: null,
+	// 	maxHeight: null,
+	// 	focus: true
+	// 	});
+	// }
 	if($('#summernote5').length > 0) {
 		$('#summernote5').summernote({
-		height: 300,                 // set editor height
+		height: 150,                 // set editor height
 		minHeight: null,             // set minimum height of editor
 		maxHeight: null,             // set maximum height of editor
 		focus: true                
@@ -423,9 +449,31 @@ Version      : 2.7.6
 
 	// Tooltip
 
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+
+
+	// Tooltip
+
 	if ($('[data-toggle="tooltip"]').length > 0) {
 		$('[data-toggle="tooltip"]').tooltip();
 	}
+
+	// Tooltip support work for all modals for badges
+
+	document.addEventListener('shown.bs.modal', function (event) {
+		const modalEl = event.target; // The modal that was just shown
+		const tooltipElements = modalEl.querySelectorAll('[data-bs-toggle="tooltip"]');
+	  
+		tooltipElements.forEach(el => {
+		  // Only initialize if not already initialized
+		  if (!bootstrap.Tooltip.getInstance(el)) {
+			new bootstrap.Tooltip(el);
+		  }
+		});
+	  });
 
 	// Datatable
 	if($('.datatable').length > 0) {

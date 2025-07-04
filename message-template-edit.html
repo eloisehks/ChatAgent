@@ -69,20 +69,12 @@
 	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
 	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
 
-    <!-- themify CSS -->
-	<!-- <link rel="stylesheet" href="assets/plugins/icons/themify/themify.css"> -->
-
-    <!-- Pe7 CSS -->
-	<!-- <link rel="stylesheet" href="assets/plugins/icons/typicons/typicons.css"> -->
-
-    <!-- Ionic CSS -->
-	<!-- <link rel="stylesheet" href="assets/plugins/icons/ionic/ionicons.css"> -->
-
     <!-- Dragula CSS -->
 	<link rel="stylesheet" href="assets/plugins/dragula/css/dragula.min.css">
 
     <!-- Summernote CSS -->
 	<link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
+    
 
 	<!-- Datetimepicker CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
@@ -95,12 +87,6 @@
 
     <!-- Customise CSS -->
     <link rel="stylesheet" href="assets/css/customise.css">
-
-    <style>
-        #div-text, #div-media {
-          display: none; /* Hide both divs initially */
-        }
-    </style>
 
 </head>
 
@@ -131,7 +117,7 @@
                                 </a>
                             </li>
                             <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Message Template" data-bs-custom-class="tooltip-primary">
-                                <a href="message-template.html">
+                                <a href="message-template.html" class="active">
                                     <i class="ti ti-layout"></i>
                                 </a>
                             </li>
@@ -141,7 +127,7 @@
                                 </a>
                             </li>
                             <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Bot" data-bs-custom-class="tooltip-primary">
-                                <a href="bot.html" class="active">
+                                <a href="bot.html">
                                     <i class="ti ti-bolt"></i>
                                 </a>
                             </li>
@@ -189,159 +175,158 @@
                                 </nav>
                             </div>
                             <div class="card-body pb-4">
-                                
                                 <div class="row">
-                                    <div class="col-xl-4 col-lg-4">
+                                    <div class="col-xl-9 col-lg-9">
                                         <div class="card">
                                             <div class="card-body">
-                                                <div class="mb-3">
-                                                    <label class="form-label"><span class="fs-16">Message Title</span></label>
-                                                    <input type="text" class="form-control" value="Lorem igsum some title">
+                                                <h5 class="mb-2">Category</h5>
+                                                <div class="dropdown mb-3 me-2 ">
+                                                    <div>
+                                                        <select class="select">
+                                                            <option>Select Category</option>
+                                                            <option selected>Marketing</option>
+                                                            <option>Utility</option>
+                                                            <option>Authentication</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="mb-2">Template Name</h5>
+                                                <input type="text" class="form-control" value="Template Name 1">
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                    Content
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-12">
+                                                        <div>
+                                                            <label class="form-label">
+                                                            <span class="fs-16">Media</span>
+                                                            <span class="ms-3 text-gray">(Optional)</span>
+                                                            </label>
+                                                        </div>
+                                                      
+                                                        <div class="btn-group mb-3" role="group" id="uploadMenu">
+                                                          <button type="button" class="btn btn-outline-primary active" data-type="none">
+                                                            <i class="fe fe-circle me-1"></i> None
+                                                          </button>
+                                                          <button type="button" class="btn btn-outline-primary" data-type="image">
+                                                            <i class="fe fe-image me-1"></i> Image
+                                                          </button>
+                                                          <button type="button" class="btn btn-outline-primary" data-type="video">
+                                                            <i class="fe fe-video me-1"></i> Video
+                                                          </button>
+                                                        </div>
+                                                      
+                                                        <!-- Image upload box -->
+                                                        <div id="uploadImage" class="upload-box d-none">
+                                                            <h5 class="mb-2">Drag & drop <span class="text-primary">image</span> here</h5>
+                                                            <a href="javascript:void(0);" class="choose-file-link" onclick="$('#imageInput').click()">or choose files from your device</a>
+                                                            <input type="file" id="imageInput" accept="image/*" class="d-none" />
+                                                            <div class="file-preview mt-2"></div> <!-- Feedback goes here -->
+                                                        </div>
+                                                        
+                                                        <!-- Video upload box -->
+                                                        <div id="uploadVideo" class="upload-box d-none">
+                                                            <h5 class="mb-2">Drag & drop <span class="text-success">video</span> here</h5>
+                                                            <a href="javascript:void(0);" class="choose-file-link" onclick="$('#videoInput').click()">or choose files from your device</a>
+                                                            <input type="file" id="videoInput" accept="video/*" class="d-none" />
+                                                            <div class="file-preview mt-2"></div> <!-- Feedback goes here -->
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-sm-12">
+                                                        <div class="col-sm-12 mt-3">
+                                                            <label class="form-label"><span class="fs-16">Header</span><span class="ms-3 text-gray">(Optional)</span></label>
+                                                            <input type="text" class="form-control" value="">
+                                                        </div>
+                                                        <div class="col-sm-12 mt-3">
+                                                            <label class="form-label"><span class="fs-16">Caption</span></label>
+                                                            <!-- Editor + counter -->
+                                                            <div id="summernote"></div>
+                                                            <div class="char-count">0 / 1000</div>
+                                                        </div>
+                                                    </div>
 
-                                                <div class="mb-3">
-                                                    <label class="form-label"><span class="fs-16">Send to</span></label>
-                                                    <div class="mb-3">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <div class="d-flex fs-15">
-                                                                    <h6><i class="fa-brands fa-whatsapp me-1 align-middle whatsapp-color"></i>WhatsApp Label Group</h6>
-                                                                    <div class="ms-auto"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#sendhistory-whatsapp" class="btn btn-light btn-sm">History</a></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">                                                                            
-                                                                <div class="mb-0">
-                                                                    <div class="fs-12 mb-2 text-muted"><em>Last sent on 3 Jan 3035, 5:00pm</em></div>
-                                                                    <div class="fs-15 text-dark">
-                                                                        <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1</a>
-                                                                        <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                                                                        <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 740 iuldsjdgf</a>
-                                                                        <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name dslgjdsg</a>
-                                                                        <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-footer">
-                                                                <button class="btn btn-primary mb-2 me-2" data-bs-target="#groupModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-send me-2"></i>Send to Label Groups</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <div class="d-flex fs-15">
-                                                                    <h6><i class="fa-brands fa-telegram me-1 align-middle telegram-color"></i>Telegram Channel</h6>
-                                                                    <div class="ms-auto"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#sendhistory-telegram" class="btn btn-light btn-sm">History</a></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">                                                                            
-                                                                <div class="mb-0">
-                                                                    <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                                                                    <div class="fs-15 text-dark">
-                                                                        <a href="telegram-group.html" class="btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1</a>
-                                                                        <a href="telegram-group.html" class="btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                                                                        <a href="telegram-group.html" class="btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 740 iuldsjdgf</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-footer">
-                                                                <button class="btn btn-primary mb-2 me-2" data-bs-target="#groupModal2" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="ti ti-send me-2"></i>Send to Channels</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-xl-8 col-lg-8" id="draggable-right">
-                                        <div class="card">
+                                    <div class="col-xl-3 col-lg-3">
+                                        <div class="card border-warning">
                                             <div class="card-header justify-content-between">
-                                                <div class="card-title d-flex align-items-center justify-content-between">
-                                                    <div><i class="fe fe-move me-2"></i></div>
-                                                    <div class="fs-16">Text Message</div>
-                                                    <div class="ms-auto"><a href="#"><i class="ti ti-trash me-2"></i></a></div>
+                                                <div class="card-title">
+                                                    Preview Template
+                                                </div>
+                                            </div>
+                                            <div class="card-body pb-2 mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <div class="card" style="min-height:80px;">
+                                                            <img src="assets/img/media/media-empty.jpg" class="card-img-top" alt="...">
+                                                            <div class="card-body  mb-0 ">
+                                                                <h6 class="card-title fw-semibold">Header...</h6>
+                                                                <p class="card-text mb-3 text-muted">Caption...Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et</p>
+                                                                <p class="card-text mb-0"><small>Last updated 3 mins ago</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="card mb-5">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                    Summary
                                                 </div>
                                             </div>
                                             <div class="card-body">
-                                                <div id="summernote">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header justify-content-between">
-                                                <div class="card-title d-flex align-items-center justify-content-between">
-                                                    <div><i class="fe fe-move me-2"></i></div>
-                                                    <div class="fs-16">Media</div>
-                                                    <div class="ms-auto"><a href="#"><i class="ti ti-trash me-2"></i></a></div>
+                                                <div class="row">
+                                                    <div class="col-xl-12">
+                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                            <h6 class="fw-medium">Message Sent</h6>
+                                                            <div>
+                                                                100
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                                            <h6 class="fw-medium">Status</h6>
+                                                            <div>
+                                                                <span class="text-success">Success</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="card-body">
-                                                <div class="mb-3">
-                                                    <img src="assets/img/media/media-04.jpg" alt="img">
-                                                    <img src="assets/img/media/media-04.jpg" alt="img">
-                                                </div>
-
-                                                <div class="mb-3">
-                                                    <!-- Hidden File Input -->
-                                                    <input type="file" id="customFile" class="d-none">
-                                                    <!-- Label as Button -->
-                                                    <label for="customFile" class="btn btn-primary">Upload File</label>
-
-                                                    <!-- Hidden File Input for Video -->
-                                                    <input type="file" id="uploadVideo" accept="video/*" class="d-none">
-
-                                                    <!-- Label as Button -->
-                                                    <label for="uploadVideo" class="btn btn-primary">Upload Video</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card" id="div-text">
-                                            <div class="card-header justify-content-between">
-                                                <div class="card-title d-flex align-items-center justify-content-between">
-                                                    <div><i class="fe fe-move me-2"></i></div>
-                                                    <div class="fs-16">Text Message</div>
-                                                    <div class="ms-auto"><a href="#"><i class="ti ti-trash me-2"></i></a></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div id="summernote2"></div>
-                                            </div>
-                                        </div>
-                                        <div class="card" id="div-media">
-                                            <div class="card-header justify-content-between">
-                                                <div class="card-title d-flex align-items-center justify-content-between">
-                                                    <div><i class="fe fe-move me-2"></i></div>
-                                                    <div class="fs-16">Media</div>
-                                                    <div class="ms-auto"><a href="#"><i class="ti ti-trash me-2"></i></a></div>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="mb-3">
-                                                    <!-- Hidden File Input -->
-                                                    <input type="file" id="customFile" class="d-none">
-                                                    <!-- Label as Button -->
-                                                    <label for="customFile" class="btn btn-primary">Upload File</label>
-
-                                                    <!-- Hidden File Input for Video -->
-                                                    <input type="file" id="uploadVideo" accept="video/*" class="d-none">
-
-                                                    <!-- Label as Button -->
-                                                    <label for="uploadVideo" class="btn btn-primary">Upload Video</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 pt-3">
-                                            <button class="btn btn-soft-primary mb-2 me-2" onclick="toggleDiv('div-text')"><i class="ti ti-message me-2"></i>Add Text Message</button>
-                                            <button class="btn btn-soft-primary mb-2" onclick="toggleDiv('div-media')"><i class="ti ti-photo me-2"></i>Add Media</button>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center justify-content-end m-0">
-                                                <a href="#" class="btn btn-outline-primary me-2">Cancel</a>
-                                                <a href="#" class="btn btn-primary">Save Message Template</a>
-                                            </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-xl-between m-0">
+
+                                        <div class="d-flex flex-wrap align-items-center justify-content-center">
+                                            <!-- <a href="message-manage-message.html" class="btn btn-outline-primary mb-2">Schedule Send</a> -->
+                                          </div>
+
+                                        <div class="d-flex flex-wrap align-items-center justify-content-center">
+                                          <a href="#" class="btn btn-outline-danger me-2 mb-2">Delete Template</a>
+                                          <a href="#" class="btn btn-primary me-2 mb-2">Save Template</a>
+                                        </div>
+                                  
+                                      </div>
+                                    </div>
+                                </div>
+                                  
                             </div>
                         </div>
                     </div>
@@ -439,794 +424,85 @@
 	<!-- Custom JS -->
     <script src="assets/js/script.js"></script> 
 
-    <!-- Show Hide div to add text messages or add media -->
+    
+    <!-- show upload image and video-->
     <script>
-        function toggleDiv(id) {
-          const div = document.getElementById(id);
-          div.style.display = (div.style.display === "none" || div.style.display === "") ? "block" : "none";
-        }
-    </script>
+        $(document).ready(function () {
+            // Button group logic
+            $('#uploadMenu .btn').on('click', function () {
+                $('#uploadMenu .btn').removeClass('active');
+                $(this).addClass('active');
 
-    <!-- Send History Whatasapp -->
-    <div class="modal fade" id="sendhistory-whatsapp">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                        Send History - WhatsApp Label Group
-                    </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="search-wrap border mb-4">
-                        <form action="#">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search For Label Name">
-                                <span class="input-group-text"><i class="ti ti-search"></i></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 740 iuldsjdgf</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name dslgjdsg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 740 iuldsjdgf</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name dslgjdsg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sdfsd 740 iuldsjdgf</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sadgasg dslgjdsg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1sddddgds dgdag</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 740 iuldsdd ddagd  dagadg jdgf</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name  dsdslgjdsg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 1</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name sss adg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name 740 iuldsjdgf</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name dslgjbbb bbb bbb dsg</a>
-                            <a href="#"  class="btn btn-sm rounded-pill bg-soft-info me-2 my-1" data-bs-target="#labelname2" data-bs-toggle="modal" data-bs-dismiss="modal">Label name jjj</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-dismiss="close">Close</button>
-                </div>   
-            </div>
-        </div>
-    </div>
-    <!-- /Send History Whatasapp -->
+                const type = $(this).data('type');
+                $('#uploadImage, #uploadVideo').addClass('d-none');
+                $('#uploadImage .file-preview, #uploadVideo .file-preview').empty();
 
-    <!-- Send History Telegram -->
-    <div class="modal fade" id="sendhistory-telegram">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                        Send History - Telegram Channels
-                    </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="search-wrap border mb-4">
-                        <form action="#">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search For Channel Name">
-                                <span class="input-group-text"><i class="ti ti-search"></i></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 740 iuldsjdgf</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name dslgjdsg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 740 iuldsjdgf</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name dslgjdsg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sdfsd 740 iuldsjdgf</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sadgasg dslgjdsg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1sddddgds dgdag</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 740 iuldsdd ddagd  dagadg jdgf</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name  dsdslgjdsg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name jjj</a>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="fs-12 mb-2 text-muted"><em>Sent on 3 Jan 3035, 5:00pm</em></div>
-                        <div class="fs-15 text-dark">
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 1</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name sss adg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name 740 iuldsjdgf</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name dslgjbbb bbb bbb dsg</a>
-                            <a href="telegram-group.html" class=" btn btn-sm rounded-pill bg-soft-info me-2 my-1">Channel name jjj</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-dismiss="close">Close</button>
-                </div>   
-            </div>
-        </div>
-    </div>
-    <!-- /Send History Telegram -->
-
-     <!-- Modal Label Name list -->
-     <div class="modal fade" id="labelname2" aria-hidden="true"
-     aria-labelledby="labelname2" tabindex="-1">
-     <div class="modal-dialog modal-lg modal-dialog-scrollable">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h4 class="modal-title" id="labelname2">View user listed under this label</h4>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal"
-                     aria-label="Close"><i class="ti ti-x"></i></button>
-             </div>
-             <div class="modal-body">
-                 <h5 class="mb-2 mt-3">Label Name 1</h5>
-                 <p>About the label.about the labelabout the labelabout the labelabout the label.</p>
-                 <!-- <h6 class="my-3">Contacts listed under this label </h6> -->
-                 <div class="search-wrap border mb-4">
-                     <form action="#">
-                         <div class="input-group">
-                             <input type="text" class="form-control" placeholder="Search For Contacts">
-                             <span class="input-group-text"><i class="ti ti-search"></i></span>
-                         </div>
-                     </form>
-                 </div>
-                 <div class="chat-users-wrap">
-                     <div class="row">
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                         <div class="col-md-6 col-sm-12">
-                             <div class="mb-4">
-                                 <div class="chat-list d-flex align-items-center justify-content-between">
-                                     <div class="flex-fill">
-                                         <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                             <div class="avatar avatar-lg online me-2">
-                                                 <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                             </div>
-                                             <div class="chat-user-info">
-                                                 <div class="chat-user-msg">
-                                                     <h6>Aaryian Jose</h6>
-                                                     <p>last seen 5 days ago</p>
-                                                 </div>
-                                             </div>
-                                         </a>
-                                     </div>
-                                 </div> 
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="modal-footer">
-                <button class="btn btn-light" data-bs-toggle="modal" data-bs-dismiss="close">Close</button>
-             </div>
-         </div>
-     </div>
-    </div>
-    <!-- /Modal Label name list -->
-
-    <!-- Modal Label name list with Back button -->
-    <div class="modal fade" id="labelname3" aria-hidden="true"
-        aria-labelledby="labelname2" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="labelname2">View user listed under this label</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"><i class="ti ti-x"></i></button>
-                </div>
-                <div class="modal-body">
-                    <h5 class="mb-2 mt-3">Label Name 1</h5>
-                    <p>About the label.about the labelabout the labelabout the labelabout the label.</p>
-                    <div class="search-wrap border mb-4">
-                        <form action="#">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search For Contacts">
-                                <span class="input-group-text"><i class="ti ti-search"></i></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="chat-users-wrap">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="mb-4">
-                                    <div class="chat-list d-flex align-items-center justify-content-between">
-                                        <div class="flex-fill">
-                                            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#contact-details" class="chat-user-list">
-                                                <div class="avatar avatar-lg online me-2">
-                                                    <img src="assets/img/profiles/avatar-01.jpg" class="rounded-circle" alt="image">
-                                                </div>
-                                                <div class="chat-user-info">
-                                                    <div class="chat-user-msg">
-                                                        <h6>Aaryian Jose</h6>
-                                                        <p>last seen 5 days ago</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary me-2" data-bs-target="#modal-labelgrouplist" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Label Group</button>
-                    <button class="btn btn-outline-primary" data-bs-target="" data-bs-toggle="modal" data-bs-dismiss="close">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /Modal Label name list with Back button -->
-
-    <!-- Label Group List -->
-    <div class="modal fade" id="groupModal" tabindex="-1" aria-labelledby="groupModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                       Send to WhatsApp Label Group
-                    </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <!-- Merged Input -->
-                        <div class="mb-3">
-                            <label for="groupInput" class="form-label"><span class="fs-16 fw-semibold">Search & Select Groups</span></label>
-                            <div class="tag-input-wrapper" id="tagInputWrapper">
-                            <!-- Tags appear here -->
-                            <input type="text" class="tag-input" id="groupInput" placeholder="Type to search...">
-                            </div>
-                        </div>
-
-                        <!-- Checkbox Group List -->
-                        <div id="group-list" class="list-group fs-16 mt-3"></div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Send</button>
-                </div>       
-            </div>
-        </div>
-    </div>
-    <!-- /Label Group List -->
-
-    <!-- Telegram Channel List -->
-    <div class="modal fade" id="groupModal2" tabindex="-1" aria-labelledby="groupModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                       Send to Telegram Channels
-                    </h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="ti ti-x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <!-- Merged Input -->
-                        <div class="mb-3">
-                            <label for="groupInput2" class="form-label">Search & Select Channels</label>
-                            <div class="tag-input-wrapper" id="tagInputWrapper2">
-                                <!-- Tags appear here -->
-                                <input type="text" class="tag-input" id="groupInput2" placeholder="Type to search...">
-                            </div>
-                        </div>
-
-                        <!-- Checkbox Group List -->
-                        <div id="group-list2" class="list-group mt-3"></div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-outline-primary me-2" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
-                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Send</button>
-                </div>       
-            </div>
-        </div>
-    </div>
-    <!-- /Telegram Channel List -->
-   
-    <!-- JS for Send to Whatsapp Label Group -->
-    <script>
-        const groupNames = [
-          "Label Name 1", "Label Name 2 Group Beta", "Label Name Group Gamma", "Label Team Delta", "Label Marketing", 
-          "Label Sales Force", "Label HR Crew", "Label Engineering", "Label Product Team", 
-          "Label Customer Support", "Label QA Squad"
-        ];
-    
-        const tagInput = document.getElementById('groupInput');
-        const tagWrapper = document.getElementById('tagInputWrapper');
-        const groupList = document.getElementById('group-list');
-        let selectedGroups = [];
-    
-        function renderGroupList(filter = "") {
-          groupList.innerHTML = "";
-          groupNames.forEach(name => {
-            if (name.toLowerCase().includes(filter.toLowerCase())) {
-              const id = name.replace(/\s+/g, '-');
-              const checked = selectedGroups.includes(name);
-              const item = document.createElement("div");
-              item.className = "list-group-item d-flex justify-content-between align-items-center";
-              item.innerHTML = `
-                <span>${name}</span>
-                <input type="checkbox" class="form-check-input" id="${id}" ${checked ? "checked" : ""}>
-              `;
-              groupList.appendChild(item);
-    
-              item.querySelector("input").addEventListener("change", (e) => {
-                if (e.target.checked) {
-                  if (!selectedGroups.includes(name)) {
-                    selectedGroups.push(name);
-                  }
-                } else {
-                  selectedGroups = selectedGroups.filter(g => g !== name);
+                if (type === 'image') {
+                $('#uploadImage').removeClass('d-none');
+                } else if (type === 'video') {
+                $('#uploadVideo').removeClass('d-none');
                 }
-                updateTags();
-              });
-            }
-          });
-        }
-    
-        function updateTags() {
-          tagWrapper.querySelectorAll(".tag").forEach(el => el.remove());
-          selectedGroups.forEach(name => {
-            const tag = document.createElement("span");
-            tag.className = "tag";
-            tag.innerHTML = `${name}<span class="remove">&times;</span>`;
-            tag.querySelector(".remove").addEventListener("click", () => {
-              selectedGroups = selectedGroups.filter(g => g !== name);
-              document.getElementById(name.replace(/\s+/g, '-'))?.click();
-              updateTags();
             });
-            tagWrapper.insertBefore(tag, tagInput);
-          });
-        }
-    
-        tagInput.addEventListener("input", () => {
-          renderGroupList(tagInput.value);
-        });
-    
-        // Reset modal on open
-        document.getElementById('groupModal').addEventListener('shown.bs.modal', () => {
-          tagInput.focus();
-          renderGroupList();
-        });
-    </script>
-    <!-- /JS for Send to Whatsapp Label Group -->
 
-    <!-- JS for Send to Telegram Channel -->
-    <script>
-        const groupNames2 = [
-          "Channel A", "Channel News Hub", "Channel Tech Updates", "Channel HR Announcements",
-          "Channel Marketing Daily", "Channel Dev Sync", "Channel Customer Feedback", "Channel Product Board"
-        ];
-      
-        const tagInput2 = document.getElementById('groupInput2');
-        const tagWrapper2 = document.getElementById('tagInputWrapper2');
-        const groupList2 = document.getElementById('group-list2');
-        let selectedGroups2 = [];
-      
-        function renderGroupList2(filter = "") {
-          groupList2.innerHTML = "";
-          groupNames2.forEach(name => {
-            if (name.toLowerCase().includes(filter.toLowerCase())) {
-              const id = 'modal2-' + name.replace(/\s+/g, '-');
-              const checked = selectedGroups2.includes(name);
-              const item = document.createElement("div");
-              item.className = "list-group-item d-flex justify-content-between align-items-center";
-              item.innerHTML = `
-                <span>${name}</span>
-                <input type="checkbox" class="form-check-input" id="${id}" ${checked ? "checked" : ""}>
-              `;
-              groupList2.appendChild(item);
-      
-              item.querySelector("input").addEventListener("change", (e) => {
-                if (e.target.checked) {
-                  if (!selectedGroups2.includes(name)) {
-                    selectedGroups2.push(name);
-                  }
-                } else {
-                  selectedGroups2 = selectedGroups2.filter(g => g !== name);
+            // Drag & drop setup
+            function setupDropZone(dropZone, fileInput, type) {
+                dropZone.on('dragenter dragover', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.addClass('dragover');
+                });
+
+                dropZone.on('dragleave', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.removeClass('dragover');
+                });
+
+                dropZone.on('drop', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.removeClass('dragover');
+
+                const files = e.originalEvent.dataTransfer.files;
+                if (files.length > 0) {
+                    fileInput[0].files = files;
+                    showPreview(dropZone, files[0], type);
                 }
-                updateTags2();
-              });
+                });
+
+                fileInput.on('change', function () {
+                if (this.files && this.files[0]) {
+                    showPreview(dropZone, this.files[0], type);
+                }
+                });
             }
-          });
-        }
-      
-        function updateTags2() {
-          tagWrapper2.querySelectorAll(".tag").forEach(el => el.remove());
-          selectedGroups2.forEach(name => {
-            const tag = document.createElement("span");
-            tag.className = "tag";
-            tag.innerHTML = `${name}<span class="remove">&times;</span>`;
-            tag.querySelector(".remove").addEventListener("click", () => {
-              selectedGroups2 = selectedGroups2.filter(g => g !== name);
-              document.getElementById('modal2-' + name.replace(/\s+/g, '-'))?.click();
-              updateTags2();
-            });
-            tagWrapper2.insertBefore(tag, tagInput2);
-          });
-        }
-      
-        tagInput2.addEventListener("input", () => {
-          renderGroupList2(tagInput2.value);
+
+            // Show preview
+            function showPreview(dropZone, file, type) {
+                const previewContainer = dropZone.find('.file-preview');
+                previewContainer.empty();
+
+                if (type === 'image') {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewContainer.append(`<img src="${e.target.result}" alt="Preview" />`);
+                };
+                reader.readAsDataURL(file);
+                } else if (type === 'video') {
+                const url = URL.createObjectURL(file);
+                previewContainer.append(`<video controls src="${url}"></video>`);
+                }
+
+                // Also show file name
+                previewContainer.append(`<div class="mt-1">${file.name}</div>`);
+            }
+
+            setupDropZone($('#uploadImage'), $('#imageInput'), 'image');
+            setupDropZone($('#uploadVideo'), $('#videoInput'), 'video');
         });
-      
-        // Reset modal on open
-        document.getElementById('groupModal2').addEventListener('shown.bs.modal', () => {
-          tagInput2.focus();
-          renderGroupList2();
-        });
-      </script>
-    <!-- /JS for Send to Telegram Channel -->
-	
+
+    </script>
+    <!-- /show upload image and video-->
+        
 </body>
 </html>
