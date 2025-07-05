@@ -624,7 +624,7 @@ html, body {
   border-color: var(--bs-table-border-color);
 }
 .table thead.table-light {
-  background-color: #FFF;
+  background-color: #f0f0f0;
   color: var(--bs-table-color);
   --bs-table-color-state: #000;
   --bs-table-color: #000;
@@ -826,7 +826,8 @@ label.custom-file-btn:hover {
 }
 
 /* schedule setup */
-.template-check {
+.template-check,
+.select-all-checkbox {
   transform: scale(1.2);
 }
 .card-text {
